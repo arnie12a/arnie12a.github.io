@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>India Trip</title>
+    <link rel="icon" href="/images/vibes.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -12,93 +13,86 @@
     <h1 class="text-3xl font-bold mb-6">India Trip</h1>
     <h3 class="text-xl mb-3">Places Visited</h3>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Bangalore">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Bangalore">
             Bangalore
         </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Pune">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Pune">
             Pune
         </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Sikkim">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Sikkim">
             Sikkim
         </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Puducherry">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Puducherry">
             Puducherry
         </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Nashik">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Nashik">
             Nashik
         </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Aurangabad">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Aurangabad">
             Aurangabad
         </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-Mumbai">
+        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
+            data-target="modal-Mumbai">
             Mumbai
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out toggle-info"
-            data-target="info-SriLanka">
-            Sri Lanka
         </li>
     </ul>
 
-    <div id="info-Bangalore" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Bangalore</h3>
-        <p>On this trip I was on my own. My dad was working this whole week so I had the entire week to myself exploring around.</p>
-    </div>
-    <div id="info-Pune" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Pune</h3>
-        <p>Additional information about Pune goes here...</p>
-    </div>
-    <div id="info-Sikkim" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Sikkim</h3>
-        <p>Additional information about Sikkim goes here...</p>
-    </div>
-    <div id="info-Puducherry" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Puducherry</h3>
-        <p>Additional information about Puducherry goes here...</p>
-    </div>
-    <div id="info-Nashik" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Nashik</h3>
-        <p>Additional information about Nashik goes here...</p>
-    </div>
-    <div id="info-Aurangabad" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Aurangabad</h3>
-        <p>Additional information about Aurangabad goes here...</p>
-    </div>
-    <div id="info-Mumbai" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Mumbai</h3>
-        <p>Additional information about Mumbai goes here...</p>
+    <div id="modal-Bangalore" class="modal hidden fixed inset-0 bg-gray-700 bg-opacity-50 flex items-center justify-center">
+        <div class="modal-content bg-white w-1/2 p-4 rounded-md shadow-md">
+            <div class="flex justify-between items-center">
+                <h3 class="text-lg font-bold">Bangalore</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <p>Additional information about Bangalore goes here...</p>
+        </div>
     </div>
 
-    <div id="info-SriLanka" class="info hidden bg-gray-200 p-4 rounded-md shadow-md">
-        <h3 class="text-lg font-bold mb-2">Sri Lanka</h3>
-        <p>Additional information about Sri Lanka goes here...</p>
+    <div id="modal-Mumbai" class="modal hidden fixed inset-0 bg-gray-700 bg-opacity-50 flex items-center justify-center">
+        <div class="modal-content bg-white w-1/2 p-4 rounded-md shadow-md">
+            <div class="flex justify-between items-center">
+                <h3 class="text-lg font-bold">Mumbai</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <p>Additional information about Mumbai goes here...</p>
+        </div>
     </div>
 
-    
+
+    <!-- Other modals similar to the one above -->
 
     <style>
-        .info:not(.hidden) {
-            display: block;
+        .modal {
+            z-index: 9999;
+        }
+
+        .modal-content {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            cursor: pointer;
         }
     </style>
 
     <script>
-        document.querySelectorAll('.toggle-info').forEach(item => {
+        document.querySelectorAll('.open-modal').forEach(item => {
             item.addEventListener('click', event => {
                 const target = document.getElementById(item.getAttribute('data-target'));
-                const infos = document.querySelectorAll('.info');
-                infos.forEach(info => {
-                    if (info !== target) {
-                        info.classList.add('hidden');
-                    }
-                });
-                target.classList.toggle('hidden');
+                target.classList.remove('hidden');
+            });
+        });
+
+        document.querySelectorAll('.close-modal').forEach(item => {
+            item.addEventListener('click', event => {
+                const modal = item.closest('.modal');
+                modal.classList.add('hidden');
             });
         });
     </script>
