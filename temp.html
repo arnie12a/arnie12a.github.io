@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here if needed */
+        /* Style for custom dropdown */
+        .custom-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-dropdown select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 2rem 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .custom-dropdown select:hover {
+            border-color: #d2d6dc;
+        }
+
+        .custom-dropdown select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);
+        }
+
+        .custom-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0.75rem;
+            width: 0;
+            height: 0;
+            border: 0.375rem solid transparent;
+            border-top-color: #718096;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .custom-dropdown svg {
+            fill: #718096;
+            position: absolute;
+            top: 50%;
+            right: 0.75rem;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-3xl mx-auto">
+
+        <!-- Dropdown for places -->
+        <div class="custom-dropdown mb-8">
+            <select onchange="showPlace()" class="custom-dropdown__select" id="placeSelect">
+                <option value="bangalore">Bangalore</option>
+                <option value="pune">Pune</option>
+                <option value="sikkim">Sikkim</option>
+                <option value="munnar">Munnar</option>
+                <option value="pondicherry">Pondicherry</option>
+                <option value="srilanka">Sri Lanka</option>
+                <option value="nashik">Nashik</option>
+                <option value="aurangabad">Aurangabad</option>
+                <option value="mumbai">Mumbai</option>
+                <!-- Add options for other places similarly -->
+            </select>
+            <svg class="custom-dropdown__icon h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                    d="M9.293 13.707a1 1 0 0 0 1.414 0l5-5a1 1 0 0 0-1.414-1.414L10 11.586l-4.293-4.293a1 1 0 1 0-1.414 1.414l5 5z" />
+            </svg>
+        </div>
+
+        <!-- Content for each place -->
+        <div id="bangaloreContent" class="place-content hidden">
+            
+        </div>
+        
+        <div id="puneContent" class="place-content hidden">
+            <h2 class="text-2xl font-bold mb-4">Pune</h2>
+            <p class="mb-4">Pune content goes here.</p>
+        </div>
+        <!-- Add similar content divs for other places -->
+
+    </div>
+
+    <script>
+        // Function to show content for a specific place
+        function showPlace() {
+            const select = document.getElementById("placeSelect");
+            const selectedValue = select.options[select.selectedIndex].value;
+
+            // Hide all content divs
+            const allContent = document.querySelectorAll('.place-content');
+            allContent.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Show content for the selected place
+            const selectedContent = document.getElementById(selectedValue + 'Content');
+            selectedContent.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
