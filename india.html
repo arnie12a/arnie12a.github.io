@@ -4,98 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India Trip</title>
-    <link rel="icon" href="/images/vibes.png">
+    <title>My Travel Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here if needed */
+    </style>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-    <h1 class="text-3xl font-bold mb-6">India Trip</h1>
-    <h3 class="text-xl mb-3">Places Visited</h3>
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Bangalore">
-            Bangalore
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Pune">
-            Pune
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Sikkim">
-            Sikkim
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Puducherry">
-            Puducherry
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Nashik">
-            Nashik
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Aurangabad">
-            Aurangabad
-        </li>
-        <li class="p-4 bg-white rounded shadow-md cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out open-modal"
-            data-target="modal-Mumbai">
-            Mumbai
-        </li>
-    </ul>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-3xl mx-auto">
 
-    <div id="modal-Bangalore" class="modal hidden fixed inset-0 bg-gray-700 bg-opacity-50 flex items-center justify-center">
-        <div class="modal-content bg-white w-1/2 p-4 rounded-md shadow-md">
-            <div class="flex justify-between items-center">
-                <h3 class="text-lg font-bold">Bangalore</h3>
-                <button class="close-modal">&times;</button>
-            </div>
-            <p>Additional information about Bangalore goes here...</p>
+        <!-- Buttons for each place -->
+        <div class="flex justify-between mb-8">
+            <button onclick="showPlace('bangalore')" class="place-button">Bangalore</button>
+            <button onclick="showPlace('pune')" class="place-button">Pune</button>
+            <button onclick="showPlace('sikkim')" class="place-button">Sikkim</button>
+            <button onclick="showPlace('munnar')" class="place-button">Munnar</button>
+            <button onclick="showPlace('pondicherry')" class="place-button">Pondicherry</button>
+            <button onclick="showPlace('srilanka')" class="place-button">Sri Lanka</button>
+            <button onclick="showPlace('nashik')" class="place-button">Nashik</button>
+            <button onclick="showPlace('aurangabad ')" class="place-button">Aurangabad</button>
+            <button onclick="showPlace('mumbai')" class="place-button">Mumbai</button>
+            <!-- Add buttons for other places similarly -->
         </div>
-    </div>
 
-    <div id="modal-Mumbai" class="modal hidden fixed inset-0 bg-gray-700 bg-opacity-50 flex items-center justify-center">
-        <div class="modal-content bg-white w-1/2 p-4 rounded-md shadow-md">
-            <div class="flex justify-between items-center">
-                <h3 class="text-lg font-bold">Mumbai</h3>
-                <button class="close-modal">&times;</button>
-            </div>
-            <p>Additional information about Mumbai goes here...</p>
+        <!-- Content for each place -->
+        <div id="bangaloreContent" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Bangalore</h2>
+            <p class="mb-4">Bangalore, officially known as Bengaluru, is the capital of the Indian state of Karnataka. It is known
+                as the "Silicon Valley of India" due to its role as the nation's leading information technology exporter.</p>
+            <img src="bangalore.jpg" alt="Bangalore" class="mb-4 rounded-md">
+            <!-- Add more content like text, images, etc. -->
         </div>
+
+        <!-- Content for Munnar -->
+        <div id="munnarContent" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Munnar</h2>
+            <p class="mb-4">Munnar is a town and hill station located in the Idukki district of the southwestern Indian state of
+                Kerala. It is situated at around 1,600 meters (5,200 ft) above sea level in the Western Ghats mountain range.</p>
+            <img src="munnar.jpg" alt="Munnar" class="mb-4 rounded-md">
+            <!-- Add more content like text, images, etc. -->
+        </div>
+
+        <!-- Content for Pune -->
+        <div id="puneContent" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Pune</h2>
+            <p class="mb-4">Pune is a sprawling city in the western Indian state of Maharashtra. It was once the base of the Peshwas
+                (prime ministers) of the Maratha Empire, which lasted from 1674 to 1818.</p>
+            <img src="pune.jpg" alt="Pune" class="mb-4 rounded-md">
+            <!-- Add more content like text, images, etc. -->
+        </div>
+
+        <!-- Content for Sikkim -->
+        <div id="sikkimContent" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Sikkim</h2>
+            <p class="mb-4">Sikkim is a state in northeastern India. It borders Tibet in the north and northeast, Bhutan in the
+                east, Nepal in the west, and West Bengal in the south.</p>
+            <img src="sikkim.jpg" alt="Sikkim" class="mb-4 rounded-md">
+            <!-- Add more content like text, images, etc. -->
+        </div>
+
+        <!-- Content for Mumbai -->
+        <div id="mumbaiContent" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Mumbai</h2>
+            <p class="mb-4">Mumbai is the capital city of the Indian state of Maharashtra. It is the most populous city in India
+                and the fourth most populous city in the world. Located on the west coast of India, Mumbai has a deep
+                natural harbor. It is also the wealthiest city in India and has the highest number of millionaires and
+                billionaires among all cities in India.</p>
+            <img src="mumbai.jpg" alt="Mumbai" class="mb-4 rounded-md">
+            <!-- Add more content like text, images, etc. -->
+        </div>
+
+        <!-- Content for other places similarly -->
+
     </div>
-
-
-    <!-- Other modals similar to the one above -->
-
-    <style>
-        .modal {
-            z-index: 9999;
-        }
-
-        .modal-content {
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .close-modal {
-            cursor: pointer;
-        }
-    </style>
 
     <script>
-        document.querySelectorAll('.open-modal').forEach(item => {
-            item.addEventListener('click', event => {
-                const target = document.getElementById(item.getAttribute('data-target'));
-                target.classList.remove('hidden');
+        // Function to show content for a specific place
+        function showPlace(place) {
+            // Hide all content divs
+            const allContent = document.querySelectorAll('[id$="Content"]');
+            allContent.forEach(content => {
+                content.classList.add('hidden');
             });
-        });
 
-        document.querySelectorAll('.close-modal').forEach(item => {
-            item.addEventListener('click', event => {
-                const modal = item.closest('.modal');
-                modal.classList.add('hidden');
-            });
-        });
+            // Show content for the selected place
+            const selectedContent = document.getElementById(place + 'Content');
+            selectedContent.classList.remove('hidden');
+        }
     </script>
+
 </body>
 
 </html>
