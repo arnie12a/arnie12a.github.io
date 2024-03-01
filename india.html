@@ -4,14 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Travel Blog</title>
+    <title>India Trip</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* Add custom styles here if needed */
+        /* Style for custom dropdown */
+        .custom-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-dropdown select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 2rem 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .custom-dropdown select:hover {
+            border-color: #d2d6dc;
+        }
+
+        .custom-dropdown select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);
+        }
+
+        .custom-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0.75rem;
+            width: 0;
+            height: 0;
+            border: 0.375rem solid transparent;
+            border-top-color: #718096;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .custom-dropdown svg {
+            fill: #718096;
+            position: absolute;
+            top: 50%;
+            right: 0.75rem;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 p-8">
+
     <div class="max-w-3xl mx-auto">
 
         <!-- Dropdown for places -->
@@ -31,69 +81,62 @@
             
         </div>
 
-        <!-- Content for each place -->
-        <div id="bangaloreContent" class="hidden">
-            <h2 class="text-2xl font-bold mb-4">Bangalore</h2>
-            <p class="mb-4">Bangalore, officially known as Bengaluru, is the capital of the Indian state of Karnataka. It is known
-                as the "Silicon Valley of India" due to its role as the nation's leading information technology exporter.</p>
-            <img src="bangalore.jpg" alt="Bangalore" class="mb-4 rounded-md">
-            <!-- Add more content like text, images, etc. -->
+        <!-- Content container -->
+        <div id="placeContent">
+            <!-- Content will be injected here -->
         </div>
-
-        <!-- Content for Munnar -->
-        <div id="munnarContent" class="hidden">
-            <h2 class="text-2xl font-bold mb-4">Munnar</h2>
-            <p class="mb-4">Munnar is a town and hill station located in the Idukki district of the southwestern Indian state of
-                Kerala. It is situated at around 1,600 meters (5,200 ft) above sea level in the Western Ghats mountain range.</p>
-            <img src="munnar.jpg" alt="Munnar" class="mb-4 rounded-md">
-            <!-- Add more content like text, images, etc. -->
-        </div>
-
-        <!-- Content for Pune -->
-        <div id="puneContent" class="hidden">
-            <h2 class="text-2xl font-bold mb-4">Pune</h2>
-            <p class="mb-4">Pune is a sprawling city in the western Indian state of Maharashtra. It was once the base of the Peshwas
-                (prime ministers) of the Maratha Empire, which lasted from 1674 to 1818.</p>
-            <img src="pune.jpg" alt="Pune" class="mb-4 rounded-md">
-            <!-- Add more content like text, images, etc. -->
-        </div>
-
-        <!-- Content for Sikkim -->
-        <div id="sikkimContent" class="hidden">
-            <h2 class="text-2xl font-bold mb-4">Sikkim</h2>
-            <p class="mb-4">Sikkim is a state in northeastern India. It borders Tibet in the north and northeast, Bhutan in the
-                east, Nepal in the west, and West Bengal in the south.</p>
-            <img src="sikkim.jpg" alt="Sikkim" class="mb-4 rounded-md">
-            <!-- Add more content like text, images, etc. -->
-        </div>
-
-        <!-- Content for Mumbai -->
-        <div id="mumbaiContent" class="hidden">
-            <h2 class="text-2xl font-bold mb-4">Mumbai</h2>
-            <p class="mb-4">Mumbai is the capital city of the Indian state of Maharashtra. It is the most populous city in India
-                and the fourth most populous city in the world. Located on the west coast of India, Mumbai has a deep
-                natural harbor. It is also the wealthiest city in India and has the highest number of millionaires and
-                billionaires among all cities in India.</p>
-            <img src="mumbai.jpg" alt="Mumbai" class="mb-4 rounded-md">
-            <!-- Add more content like text, images, etc. -->
-        </div>
-
-        <!-- Content for other places similarly -->
 
     </div>
 
     <script>
+        // Content for each place
+        const placeContent = {
+            bangalore: `
+                <h2 class="text-2xl font-bold mb-4">Bangalore</h2>
+                <p class="mb-4">Bangalore, also known as Bengaluru, is the capital city of the Indian state of Karnataka. It is renowned as the "Silicon Valley of India" due to its significant role in the country's information technology sector. Bangalore is a vibrant metropolis known for its pleasant climate, diverse culture, and booming economy. The city boasts a rich history, modern infrastructure, and a thriving startup ecosystem. Additionally, Bangalore is home to numerous educational institutions, research centers, and multinational corporations, making it a prominent hub for innovation and entrepreneurship in India.</p>
+                <p class="mb-4">In Bangalore my dad was working so I had the entire week to myself. So I decided to a little exploring.</p>
+                <p class="mb-4">Some of the places I checked out included Lalbagh Botanic Gardens, Bannerghatta Biological Park, and Nandi Hills.</p>
+
+            `,
+            pune: `
+                <h2 class="text-2xl font-bold mb-4">Pune</h2>
+                <p class="mb-4">Pune content goes here.</p>
+            `,
+            sikkim: `
+                <h2 class="text-2xl font-bold mb-4">Sikkim</h2>
+                <p class="mb-4">Sikkim content goes here.</p>
+            `,
+            munnar: `
+                <h2 class="text-2xl font-bold mb-4">Munnar</h2>
+                <p class="mb-4">Munnar content goes here.</p>
+            `,
+            pondicherry: `
+                <h2 class="text-2xl font-bold mb-4">Pondicherry</h2>
+                <p class="mb-4">Pondicherry content goes here.</p>
+            `,
+            srilanka: `
+                <h2 class="text-2xl font-bold mb-4">Sri Lanka</h2>
+                <p class="mb-4">Sri Lanka content goes here.</p>
+            `,
+            nashik: `
+                <h2 class="text-2xl font-bold mb-4">Nashik</h2>
+                <p class="mb-4">Nashik content goes here.</p>
+            `,
+            aurangabad: `
+                <h2 class="text-2xl font-bold mb-4">Aurangabad</h2>
+                <p class="mb-4">Aurangabad content goes here.</p>
+            `,
+            mumbai: `
+                <h2 class="text-2xl font-bold mb-4">Mumbai</h2>
+                <p class="mb-4">Mumbai content goes here.</p>
+            `
+            // Add content for other places similarly
+        };
+
         // Function to show content for a specific place
         function showPlace(place) {
-            // Hide all content divs
-            const allContent = document.querySelectorAll('[id$="Content"]');
-            allContent.forEach(content => {
-                content.classList.add('hidden');
-            });
-
-            // Show content for the selected place
-            const selectedContent = document.getElementById(place + 'Content');
-            selectedContent.classList.remove('hidden');
+            const contentContainer = document.getElementById('placeContent');
+            contentContainer.innerHTML = placeContent[place];
         }
     </script>
 
