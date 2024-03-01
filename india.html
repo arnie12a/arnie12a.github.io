@@ -14,18 +14,21 @@
 <body class="bg-gray-100 p-8">
     <div class="max-w-3xl mx-auto">
 
-        <!-- Buttons for each place -->
-        <div class="flex justify-between mb-8">
-            <button onclick="showPlace('bangalore')" class="place-button">Bangalore</button>
-            <button onclick="showPlace('pune')" class="place-button">Pune</button>
-            <button onclick="showPlace('sikkim')" class="place-button">Sikkim</button>
-            <button onclick="showPlace('munnar')" class="place-button">Munnar</button>
-            <button onclick="showPlace('pondicherry')" class="place-button">Pondicherry</button>
-            <button onclick="showPlace('srilanka')" class="place-button">Sri Lanka</button>
-            <button onclick="showPlace('nashik')" class="place-button">Nashik</button>
-            <button onclick="showPlace('aurangabad ')" class="place-button">Aurangabad</button>
-            <button onclick="showPlace('mumbai')" class="place-button">Mumbai</button>
-            <!-- Add buttons for other places similarly -->
+        <!-- Dropdown for places -->
+        <div class="custom-dropdown mb-8">
+            <select onchange="showPlace(this.value)" class="custom-dropdown__select">
+                <option value="bangalore">Bangalore</option>
+                <option value="pune">Pune</option>
+                <option value="sikkim">Sikkim</option>
+                <option value="munnar">Munnar</option>
+                <option value="pondicherry">Pondicherry</option>
+                <option value="srilanka">Sri Lanka</option>
+                <option value="nashik">Nashik</option>
+                <option value="aurangabad">Aurangabad</option>
+                <option value="mumbai">Mumbai</option>
+                <!-- Add options for other places similarly -->
+            </select>
+            
         </div>
 
         <!-- Content for each place -->
