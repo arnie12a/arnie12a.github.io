@@ -92,6 +92,7 @@
         // Content for each place
         const placeContent = {
             bangalore: `
+            <div class="container mx-auto">
                 <h2 class="text-2xl font-bold mb-4">Bangalore (Bengaluru)</h2>
                 <p class="mb-4">Bangalore, officially known as Bengaluru, is the capital of the Indian state of Karnataka. It is known for being the "Silicon Valley of India" due to its role as the nation's leading information technology exporter. The city is home to numerous tech parks situated in every district, hosting many companies.</p>
                 <p class="mb-4">During my visit to Bangalore, my dad was working at one of these tech parks, leaving me with the entire week to explore the city. Here are my three favorite places:</p>
@@ -102,10 +103,27 @@
                 </ul>
                 <p class="mb-4">Each of these destinations offered a unique escape from the hustle and bustle of the city from left to right.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <img src="/images/blog/bangalore/DSC05205.jpg" alt="Lalbagh Botanic Garden" class="rounded-md">
-                    <img src="/images/blog/bangalore/DSC05250.jpg" alt="Bannerghatta Biological Park" class="rounded-md">
-                    <img src="/images/blog/bangalore/DSC05320.jpg" alt="Nandi Hills" class="rounded-md">
+                    <div class="relative">
+                        <img src="/images/blog/bangalore/DSC05205.jpg" alt="Lalbagh Botanic Garden" class="rounded-md">
+                        <div class="absolute bottom-0 left-0 bg-white p-2">
+                            <p>Lalbagh Botanic Gardens</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="/images/blog/bangalore/DSC05250.jpg" alt="Bannerghatta Biological Park" class="rounded-md">
+                        <div class="absolute bottom-0 left-0 bg-white p-2">
+                            <p>Bannerghatta Biological Park</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="/images/blog/bangalore/DSC05320.jpg" alt="Nandi Hills" class="rounded-md">
+                        <div class="absolute bottom-0 left-0 bg-white p-2">
+                            <p>Nandi Hills</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
             `,
             pune: `
                 <h2 class="text-2xl font-bold mb-4">Pune</h2>
