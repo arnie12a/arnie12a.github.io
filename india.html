@@ -64,7 +64,6 @@
 
     <div class="max-w-3xl mx-auto">
 
-        <!-- Dropdown for places -->
         <div class="custom-dropdown mb-8">
             <select onchange="showPlace(this.value)" class="custom-dropdown__select">
                 <option value="bangalore">Bangalore</option>
@@ -76,12 +75,10 @@
                 <option value="nashik">Nashik</option>
                 <option value="aurangabad">Aurangabad</option>
                 <option value="mumbai">Mumbai</option>
-                <!-- Add options for other places similarly -->
             </select>
             
         </div>
 
-        <!-- Content container -->
         <div id="placeContent">
             <!-- Content will be injected here -->
         </div>
@@ -89,7 +86,6 @@
     </div>
 
     <script>
-        // Content for each place
         const placeContent = {
             bangalore: `
             <div class="container mx-auto">
@@ -125,31 +121,102 @@
             `,
             pune: `
                 <h2 class="text-2xl font-bold mb-4">Pune</h2>
-                <p class="mb-4">My trip to Pune was for visiting family.</p>
-                <p class="mb-4">Throughout the time there, we also had the opportunity to check out Sinahgad and Raigad fort which were two stronghold forts in the Maratha Empire under Chatrapati Shivaji in the 1600s. </p>
-                <p class="mb-4">Sinahgad fort provides a beautiful view of Pune to one side and never ending valleys in the opposite direction. Raigad fort was a little further out and required a big hike up. </p>
+                <p class="mb-4">My trip to Pune was for visiting family. I had the chance to see my Ajji, Atya, my cousin Nishita and her dawgs, went motorcycling with Suneeth Kaka and surprised Kavita.</p>
+                <p class="mb-4">Throughout the time there, we also had the opportunity to check out Sinahgad and Raigad fort which were two stronghold forts in the Maratha Empire under Chatrapati Shivaji in the 1600s. It was really captivating to see how military forts were strategically built and captured bringing out the bravery of soldiers.</p>
+                <p class="mb-4">Sinahgad fort provides a beautiful view of Pune to one side and never ending valleys in the opposite direction. Raigad fort was a little further out and required a big hike up which reminded me of hiking in Zion. The high elevation and location of these forts definitely help depict the strength of the Maratha empire at the time.</p>
+                <h4 class="text-xl font-bond mb-4">Sinahgad Fort</h4>
+                <h4 class="text-xl font-bond mb-4">Raigad Fort</h4>
             `,
             sikkim: `
                 <h2 class="text-2xl font-bold mb-4">Sikkim</h2>
                 <p class="mb-4">A picturesque state in northeastern India, renowned for its stunning Himalayan landscape and rich Buddhist culture. With Mount Kanchenjunga as its centerpiece, it offers lush valleys and pristine lakes, making it a must-visit destination for nature lovers.</p>
+                <p class="mb-4">After asking a bunch of family members about the area and them telling me about their experience with a summer camp at HMI (Himilayan Mountaineering Institute), I knew Sikkim was the place to see massive mountains & the way of life in such a location.</p>
                 <p class="mb-4">On this trip, my dad and I visited three towns: Darjeeling, Pelling, and Gangtok, each offering its unique beauty.</p>
+
+                <h4 class="text-xl font-bond mb-4">Darjeeling</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/sikkim/DSC05464.jpg" alt="Tiger Hills Valley" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Tiger Hills View of Valley</figcaption>
+                        </figure>
+                    </div>
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/sikkim/DSC05458.jpg" alt="Kanchenjunga from Tiger Hills" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kanchenjunga from Tiger Hills Viewpoint</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bond mb-4">Pelling</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/sikkim/DSC05592.jpg" alt="Kanchenjunga Waterfall" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kanchenjunga Waterfall from Glacier</figcaption>
+                        </figure>
+                    </div>
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/sikkim/DSC05621.jpg" alt="View of Pelling from hotel" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">View of Pelling from our hotel</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bond mb-4">Gangtok</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/sikkim/DSC05464.jpg" alt="Tiger Hills Valley" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Tiger Hills View of Valley</figcaption>
+                        </figure>
+                    </div>
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/sikkim/DSC05458.jpg" alt="Kanchenjunga from Tiger Hills" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kanchenjunga from Tiger Hills Viewpoint</figcaption>
+                        </figure>
+                    </div>
+                </div>
 
                 `,
             munnar: `
                 <h2 class="text-2xl font-bold mb-4">Munnar</h2>
                 <p class="mb-4">The town in the Western Ghats mountain range in India's Kerala state would be the perfect place for my first solo-adventure.</p>
-                <p class="mb-4">Tea plantations are neverending in every single direction. The climate is very desirable for tea as Munnar is situated at around 5,200 ft above sea level.</p>
-                <p class="mb-4">I did alot of treking here so let me name the places out.</p>
-                <ul>
+                <p class="mb-4">Munnar is situated at around 5,2000 ft making the climate very desirable for growing tea. As a result, tea plantations are neverending in every direction. Not only that, but the overall climate changes every 5-10 km you drive.</p>
+                <p class="mb-4">I did alot of treking here. One the first day I told my driver, Bhau, that I like to hike and he made it his mission to take me on the best hikes throughout Munnar. So you can say I enjoyed myself quite a bit.</p>
+                <p class="mb-4">Here are some of the things I did:</p>
+                <ul class="list-disc pl-8 mb-4">
                     <li>Trek Near Top Station</li>
                     <li>Trek at Grass Mountain Letchmi Estate</li>
                     <li>Eravikulam National Park</li>
                     <li>Kolukumlai Jeep Safari</li>
                 </ul>
+
+                <h4 class="text-xl font-bond mb-4">Top Station Hike</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/munnar/DSC05799.jpg" alt="Top Station" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Worker plucking tea leaves from Top Station</figcaption>
+                        </figure>
+                    </div>
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/munnar/DSC05834.jpg" alt="Beautiful flower" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Beautiful flower from hike</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                
             `,
             pondicherry: `
                 <h2 class="text-2xl font-bold mb-4">Pondicherry</h2>
-                <p class="mb-4">TThe french influence in this city is abundant.</p>
+                <p class="mb-4">The french influence in this city is abundant.</p>
+                <p class="mb-4">I chose to be more present in Puducherry and didn't take many photos but I will still share my highlights of the area</p>
 
             `,
             srilanka: `
