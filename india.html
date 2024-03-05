@@ -9,54 +9,7 @@
     <style>
         /* Add custom styles here if needed */
         /* Style for custom dropdown */
-        .custom-dropdown {
-            position: relative;
-            display: inline-block;
-        }
 
-        .custom-dropdown select {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-color: #fff;
-            border: 1px solid #e2e8f0;
-            padding: 0.5rem 2rem 0.5rem 1rem;
-            font-size: 1rem;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .custom-dropdown select:hover {
-            border-color: #d2d6dc;
-        }
-
-        .custom-dropdown select:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);
-        }
-
-        .custom-dropdown::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 0.75rem;
-            width: 0;
-            height: 0;
-            border: 0.375rem solid transparent;
-            border-top-color: #718096;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
-
-        .custom-dropdown svg {
-            fill: #718096;
-            position: absolute;
-            top: 50%;
-            right: 0.75rem;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
     </style>
 </head>
 
@@ -64,8 +17,8 @@
 
     <div class="max-w-3xl mx-auto">
 
-        <div class="custom-dropdown mb-8">
-            <select onchange="showPlace(this.value)" class="custom-dropdown__select">
+        <div class="relative inline-block">
+            <select onchange="showPlace(this.value)" class="block appearance-none bg-white border border-gray-300 hover:border-gray-400 px-4 py-3 pr-8 rounded leading-tight focus:outline-none focus:border-indigo-500 focus:shadow-outline">
                 <option value="bangalore">Bangalore</option>
                 <option value="pune">Pune</option>
                 <option value="sikkim">Sikkim</option>
@@ -76,8 +29,14 @@
                 <option value="aurangabad">Aurangabad</option>
                 <option value="mumbai">Mumbai</option>
             </select>
-            
+            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M6 8l4 4 4-4z"/>
+                </svg>
+            </div>
         </div>
+        
+        
 
         <div id="placeContent">
             <!-- Content will be injected here -->
