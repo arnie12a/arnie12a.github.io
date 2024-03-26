@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/india.jpg">
+    <title>India Trip</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here if needed */
+        /* Style for custom dropdown */
+
+    </style>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-3xl mx-auto">
+
+        <div class="relative inline-block">
+            <select onchange="showPlace(this.value)" class="block appearance-none bg-white border border-gray-300 hover:border-gray-400 px-4 py-3 pr-8 rounded leading-tight focus:outline-none focus:border-indigo-500 focus:shadow-outline" style="display: none;" id="dropdownMenu" >
+                <option value="bangalore">Bangalore</option>
+                <option value="pune">Pune</option>
+                <option value="sikkim">Sikkim</option>
+                <option value="munnar">Munnar</option>
+                <option value="pondicherry">Pondicherry</option>
+                <option value="srilanka">Sri Lanka</option>
+                <option value="nashik">Nashik</option>
+                <option value="aurangabad">Aurangabad</option>
+                <option value="mumbai">Mumbai</option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none -mt-1">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M6 8l4 4 4-4z"/>
+                </svg>
+            </div>
+        </div>
+        
+        
+        
+
+        <div id="placeContent">
+            <!-- Content will be injected here -->
+            <div id="displayIndiaInfo" class="max-w-lg mx-auto bg-white rounded-lg shadow-md p-8">
+                <h1 class="text-3xl font-bold mb-4">India 2024 Trip</h1>
+                <p class="text-gray-600 mb-4">After graduating from UW-Madison in December 2023, I wanted to explore around India before entering the workforce. Here is a little blog post highlighting all the things I did on the trip.</p>
+                <p class="text-gray-600 mb-4">The itinerary would include places in North, Middle, and South India. So I can see the start of the Himilayas, family in Maharastra, the Tea Plantations in Kerala, and the beautiful beaches of Sri Lanka.</p>
+                <button onclick="openDropdownMenu()" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Click Me</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const placeContent = {
+            bangalore: `
+            <div class="container mx-auto py-4">
+                <h2 class="text-2xl font-bold mb-4">Bangalore (Bengaluru)</h2>
+                <p class="mb-4">Bangalore, officially known as Bengaluru, is the capital of the Indian state of Karnataka. It is known for being the "Silicon Valley of India" due to its role as the nation's leading information technology exporter. The city is home to numerous tech parks situated in every district, hosting many companies.</p>
+                <p class="mb-4">During my visit to Bangalore, my dad was working at one of these tech parks, leaving me with the entire week to explore the city. Here are my three favorite places:</p>
+                <ul class="list-disc pl-8 mb-4">
+                    <li>Lalbagh Botanic Gardens</li>
+                    <li>Bannerghatta Biological Park</li>
+                    <li>Nandi Hills</li>
+                </ul>
+                <p class="mb-4">Each of these destinations offered a unique escape from the hustle and bustle of the city. My favorite places has to be the Lalbagh Botanical Gardens & Cubbon Park because it reminds me a little of New York's Central Park. Amidst all the craziness of the noise of the city, the park provides a tranquel setting where couples are having picnics, workers are napping, and children are running.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/bangalore/DSC05205.jpg" alt="Lalbagh Botanic Garden" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Lalbagh Botanic Garden</figcaption>
+                        </figure>
+                    </div>
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/bangalore/DSC05250.jpg" alt="Bannerghatta Biological Park" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Bannerghatta Biological Park</figcaption>
+                        </figure>
+                    </div>
+                    <div class="relative">
+                        <img src="/images/blog/bangalore/DSC05320.jpg" alt="Nandi Hills" class="rounded-md">
+                        <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Nandi Hills</figcaption>
+                    </div>
+                </div>
+            </div>
+
+            `,
+            pune: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Pune</h2>
+                    <p class="mb-4">My trip to Pune was for visiting family. I had the chance to see my Ajji, Atya, my cousin Nishita and her dawgs, went motorcycling with Suneeth Kaka and surprised Kavita.</p>
+                    <p class="mb-4">Throughout the time there, we also had the opportunity to check out Sinahgad and Raigad fort which were two stronghold forts in the Maratha Empire under Chatrapati Shivaji in the 1600s. It was really captivating to see how military forts were strategically built and captured bringing out the bravery of soldiers.</p>
+                    <p class="mb-4">Sinahgad fort provides a beautiful view of Pune to one side and never ending valleys in the opposite direction. Raigad fort was a little further out and required a big hike up which reminded me of hiking in Zion. The high elevation and location of these forts definitely help depict the strength of the Maratha empire at the time.</p>
+                    <h4 class="text-xl font-bond mb-4">Sinahgad Fort</h4>
+                    <h4 class="text-xl font-bond mb-4">Raigad Fort</h4>
+                    <p class="mb-4">This was the first time hearing/exploring these two forts and introduced me to Chatrapati Shivaji. Now I can truly comprehend the importance that he holds to the Marathi people. </p>
+                </div>
+            `,
+            sikkim: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Sikkim</h2>
+                    <p class="mb-4">A picturesque state in northeastern India, renowned for its stunning Himalayan landscape and rich Buddhist culture. With Mount Kanchenjunga as its centerpiece, it offers lush valleys and pristine lakes, making it a must-visit destination for nature lovers.</p>
+                    <p class="mb-4">After asking a bunch of family members about the area and them telling me about their experience with a summer camp at HMI (Himilayan Mountaineering Institute), I knew Sikkim was the place to see massive mountains & the way of life in such a location.</p>
+                    <p class="mb-4">On this trip, my dad and I visited three towns: Darjeeling, Pelling, and Gangtok, each offering its unique beauty.</p>
+
+                    <h4 class="text-xl font-bond mb-4">Darjeeling</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/sikkim/DSC05464.jpg" alt="Tiger Hills Valley" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Tiger Hills View of Valley</figcaption>
+                            </figure>
+                        </div>
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/sikkim/DSC05458.jpg" alt="Kanchenjunga from Tiger Hills" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kanchenjunga from Tiger Hills Viewpoint</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-bond mb-4">Pelling</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/sikkim/DSC05592.jpg" alt="Kanchenjunga Waterfall" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kanchenjunga Waterfall from Glacier</figcaption>
+                            </figure>
+                        </div>
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/sikkim/DSC05621.jpg" alt="View of Pelling from hotel" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">View of Pelling from our hotel</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-bond mb-4">Gangtok</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/sikkim/DSC05701.jpg" alt="View of Kanchenchuga from Tsongmo Lake" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">View of Kanchenchuga from Tsongmo Lake</figcaption>
+                            </figure>
+                        </div>
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/sikkim/DSC05737.jpg" alt="Gangtok Soccer Stadium" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Gangtok Soccer Stadium</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                `,
+            munnar: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Munnar</h2>
+                    <p class="mb-4">The town in the Western Ghats mountain range in India's Kerala state would be the perfect place for my first solo-adventure.</p>
+                    <p class="mb-4">Munnar is situated at around 5,2000 ft making the climate very desirable for growing tea. As a result, tea plantations are neverending in every direction. Not only that, but the overall climate changes every 5-10 km you drive.</p>
+                    <p class="mb-4">I did alot of treking here. One the first day I told my driver, Bhau, that I like to hike and he made it his mission to take me on the best hikes throughout Munnar. So you can say I enjoyed myself quite a bit.</p>
+                    <p class="mb-4">Here are some of the things I did:</p>
+                    <ul class="list-disc pl-8 mb-4">
+                        <li>Trek Near Top Station</li>
+                        <li>Trek at Grass Mountain Letchmi Estate</li>
+                        <li>Eravikulam National Park</li>
+                        <li>Kolukumlai Jeep Safari</li>
+                    </ul>
+
+                    <h4 class="text-xl font-bond mb-4">Top Station Hike</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/munnar/DSC05799.jpg" alt="Top Station" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Worker plucking tea leaves from Top Station</figcaption>
+                            </figure>
+                        </div>
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/munnar/DSC05834.jpg" alt="Beautiful flower" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Beautiful flower from hike</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-bond mb-4">Trek</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/munnar/IMG_6776.jpg" alt="Trek" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Enjoyed some chai at the top of the mountain</figcaption>
+
+                                </figure>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-bond mb-4">Kolukumlai Jeep Safari</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/munnar/DSC06016.jpg" alt="Kolukumlai sunrise" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Sunrise from Kolukumlai</figcaption>
+                            </figure>
+                        </div>
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/munnar/IMG_6812.jpg" alt="selfie of tea plantation" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kolukumlai Tea Plantation</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                
+            `,
+            pondicherry: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Pondicherry</h2>
+                    <p class="mb-4">The french influence in this city is abundant which was directly translated to the awesome tasting crosaunts.</p>
+                    <p class="mb-4">I chose to be more present in Puducherry and didn't take many photos but I will still share my highlights of the area. Also, this so happened to be the first place my mom and I visited together.</p>
+                    <p class="mb-4">My favorite part of this trip was definitely just walking throughout the town and also spending time in the hotel pool. The seafood here was spectacular as everything is fresh, straight from the ocean.</p>
+                </div>
+            `,
+            srilanka: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Sri Lanka</h2>
+                    <p class="mb-4">I cannot wait to come back and explore the entire country becuase just the bottom of the country is incredible.</p>
+                    <h4 class="text-xl font-bold mb-4">Galle Fort</h4>
+                    <p class="mb-4">The Dutch Fort holds beautiful architecture. The highlight here was watching the local college cricket match against a rival college. The atmosphere was electric and watching the game from a picturesque viewpoint within the fort was a really cool experience.</p>
+                    <h4 class="text-xl font-bold mb-4">Hiriketia Beach</h4>
+                    <p class="mb-4">Here I caught my first wave but it also happened to be my only wave as well :) This little surf town is exactly where I want to spend a lot of my time in life. Hearing the waves crash and people buzzing is a relaxing environment to be in.</p>
+                    <h4 class="text-xl font-bold mb-4">Yala National Park</h4>
+                    <p class="mb-4">The hotel in Yala National Park is by far the best I have ever experienced. The ammenities and treatment from the staff is five stars. Also, went on a safari through the national park and saw elephants, birds, leopards, crocodiles, and deer.</p>
+                    <p class="mb-4">The guide for out jeep safari really inspires me to take photography seriously. He also taught me how to shoot with manual focus. So, my photos are going to get a lot better!</p>
+                    <h4 class="text-xl font-bold mb-4">Mirissa</h4>
+                    <p class="mb-4">This would be the last visit on the trip. I would describe this town to be Hawaii but one hundred times cheaper. My favorite thing here was watching the sunset at Parrot Rock. Looking forward to coming back and hopefully surfing in the upcoming future.</p>
+                </div>
+            `,
+            nashik: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Nashik</h2>
+                    <p class="mb-4">What a quiet and pleasant city Nashik is. Not only that but it is very clean as well.</p>
+                    <p class="mb-4">The purpose of this trip is to visit my Ajji on my Aai's side of the family. I have not seen her in ages. Also, my Marathi and her English has drastically improved so we can have much better conversations lol.</p>
+                    <p class="mb-4">Probably my favorite thing I did here was went on jogs in the evening. My Ajji told me about a nice track in the area, so everyday I decided to stoll on over there. I forgot how in India, people flood the nearby parks to play cricket, soccer, basketball, or just gossip as well. It is just a relaxing vibe. This is a really nostalgic feeling that I remember from India, because playing at the local park was my entire childhood whenever visiting India with my parents.</p>
+                </div>
+                `,
+            aurangabad: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Aurangabad</h2>
+                    <p class="mb-4">Made a quick stop here to see my moms sister. But saw some hidden gems that I had not planned to see.</p>
+                    <p class="mb-4">I visited Ellora Caves and Bibi Ka Maqbara. They were so rich in architecture details it was a lot to take in at once. The fact that everything is all hand carved is astonishing. All I can think about is how many people and how much time did it take to contstruct.</p>
+                
+                </div>
+            `,
+            mumbai: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Mumbai</h2>
+                    <p class="mb-4">The city that never sleeps. Being back in Mumbai brings back some really good memories. My dad grew up in a suburb of Mumbai so I have been here a couple of times. However, this time I would be doing a lot more sightseeing and taking in the beauty that the city has to offer.</p>
+                    <p class="mb-4">So lets talk about all the exploring my mom and I did!</p>
+                    <p class="mb-4">From seeing the beautiful sunsets on Marine Drive to relaxing at the Taj's pool, we both explored and relaxed plenty. Favorites had to be eating Bhel Puri and visiting Yama Ajji. Also, the mangos she gave me were absolute first class. </p>
+                    
+                </div>
+            `
+        };
+
+        // Function to show content for a specific place
+        function showPlace(place) {
+            const contentContainer = document.getElementById('placeContent');
+            contentContainer.innerHTML = placeContent[place];
+        }
+
+        // function to toggle dropdown and text
+        function openDropdownMenu() {
+            var dropdown = document.getElementById("dropdownMenu");
+            var displayText = document.getElementById("displayIndiaInfo");
+
+            dropdown.style.display = "block";
+            displayText.style.display = "none";
+
+            displayText.parentNode.removeChild(displayText);
+        }
+    </script>
+
+</body>
+
+</html>

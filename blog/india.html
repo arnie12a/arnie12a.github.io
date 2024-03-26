@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/india.jpg">
+    <title>India Trip</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here if needed */
+        /* Style for custom dropdown */
+
+    </style>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-3xl mx-auto">
+
+        <div class="relative inline-block">
+            <select onchange="showPlace(this.value)" class="block appearance-none bg-white border border-gray-300 hover:border-gray-400 px-4 py-3 pr-8 rounded leading-tight focus:outline-none focus:border-indigo-500 focus:shadow-outline" style="display: none;" id="dropdownMenu" >
+                <option value="bangalore">Bangalore</option>
+                <option value="pune">Pune</option>
+                <option value="sikkim">Sikkim</option>
+                <option value="munnar">Munnar</option>
+                <option value="pondicherry">Pondicherry</option>
+                <option value="srilanka">Sri Lanka</option>
+                <option value="mumbai">Mumbai</option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none -mt-1">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M6 8l4 4 4-4z"/>
+                </svg>
+            </div>
+        </div>
+        
+        
+        
+
+        <div id="placeContent">
+            <!-- Content will be injected here -->
+            <div id="displayIndiaInfo" class="max-w-lg mx-auto bg-white rounded-lg shadow-md p-8">
+                <h1 class="text-3xl font-bold mb-4">India 2024 Trip</h1>
+                <p class="text-gray-600 mb-4">After graduating from UW-Madison in December 2023, I wanted to explore around India. Here is a little blog post highlighting my trip.</p>
+                <p class="text-gray-600 mb-4">I picked one photo from every place I went to and wrote about it. Trust me this was a hard thing to do because there were so many beautiful pictures.</p>
+                <button onclick="openDropdownMenu()" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Click Me</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const placeContent = {
+            bangalore: `
+            <div class="container mx-auto py-4">
+                <h2 class="text-2xl font-bold mb-4">Bangalore (Bengaluru)</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                    <div class="relative">
+                        <figure>
+                            <img src="/images/blog/india/DSC05205.jpg" alt="Lalbagh Botanic Garden" class="rounded-md">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Lalbagh Botanic Garden</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <p class="mb-4 py-4">A sprawling garden covering a 240 acres piece of land in the center of the city, Lalbagh Botanic Garden is a major attraction in Bangalore. It offers tranquility in a city that is always on the move. Here, hundreds of couples and people soak in this comfort making it a great place to just chill chill just chill :)</p>
+                <p class="mb-4"></p>
+            </div>
+
+            `,
+            pune: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Raigad Fort</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/india/DSC05416.jpg" alt="Raigad Fort" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Raigad Fort</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            `,
+            sikkim: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Kanchenjunga</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/india/kanchenjunga.JPG" alt="Kanchenjunga" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Kanchenjunga</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <p class="mb-4">Mount Kanchenjunga is the centerpiece of the state of Sikkim offering lush valleys and pristine lakes, making it the perfect destination for nature lovers. This absolute beast's size cannot be acurately emphasized through photo. On the way to Tsongmo Lake, </p>
+                </div>
+
+                `,
+            munnar: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Munnar</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/india/IMG_6948.JPG" alt="Munnar" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Munnar</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            `,
+            pondicherry: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Aurville</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/india/DSC06084.jpg" alt="Auroville" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Auroville</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            `,
+            srilanka: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Sri Lanka</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/india/DSC06308.jpg" alt="Auroville" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Sri Lanka</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <p class="mb-4">Took a tour through Yala National Park where I caught this beautiful bird called a Darter. Our tour guide, Buddhika, is a brilliant bird and photography enthusiast who provided me with a bunch of camera tips that I will use in my future endeavors. The most important being manual focus which I was able to implement in this photo. Specifically focusing on the Darter, I was able to </p>
+                </div>
+            `,
+            mumbai: `
+                <div class="py-4">
+                    <h2 class="text-2xl font-bold mb-4">Mumbai</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                        <div class="relative">
+                            <figure>
+                                <img src="/images/blog/india/DSC06119.jpg" alt="Gateway of India" class="rounded-md">
+                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Gateway of India</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <p class="mb-4">Staying at the Taj provided for the best view of the Gateway of India. </p>
+                </div>
+            `
+        };
+
+        // Function to show content for a specific place
+        function showPlace(place) {
+            const contentContainer = document.getElementById('placeContent');
+            contentContainer.innerHTML = placeContent[place];
+        }
+
+        // function to toggle dropdown and text
+        function openDropdownMenu() {
+            var dropdown = document.getElementById("dropdownMenu");
+            var displayText = document.getElementById("displayIndiaInfo");
+
+            dropdown.style.display = "block";
+            displayText.style.display = "none";
+
+            displayText.parentNode.removeChild(displayText);
+        }
+    </script>
+
+</body>
+
+</html>
