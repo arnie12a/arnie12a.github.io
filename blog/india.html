@@ -28,7 +28,7 @@
                 <option value="srilanka">Sri Lanka</option>
                 <option value="mumbai">Mumbai</option>
             </select>
-            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none -mt-1">
+            <div class="absolute inset-y-5 right-0 flex items-center px-2 pointer-events-none -mt-1" style="display: none;" id="dropdownIcon">
                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M6 8l4 4 4-4z"/>
                 </svg>
@@ -176,9 +176,11 @@
         function openDropdownMenu() {
             var dropdown = document.getElementById("dropdownMenu");
             var displayText = document.getElementById("displayIndiaInfo");
+            var dropdownIcon = document.getElementById("dropdownIcon");
 
             dropdown.style.display = "block";
             displayText.style.display = "none";
+            dropdownIcon.style.display = "block";
 
             displayText.parentNode.removeChild(displayText);
         }
