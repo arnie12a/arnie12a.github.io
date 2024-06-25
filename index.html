@@ -93,43 +93,63 @@
     </div>
 </section>
 
-<!-- Experience Section -->
-<section id="experience"
-         class="bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32"
-         style="background-color: #DBD3D8;">
+<!-- Experiences -->
+<section id="experience" class="bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32" style="background-color: #DBD3D8;">
     <div class="container mx-auto text-center mb-8">
         <h2 class="text-3xl font-bold">Experiences</h2>
     </div>
 
-    <div class="container mx-auto text-center flex flex-wrap justify-center">
-        <div class="max-w-md mx-4 mb-8">
-            <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
-                <img src="./images/discover.jpg" alt="Discover Financial Services" class="mr-4 h-16">
-                <div class="flex-grow">
-                    <h3 class="text-xl font-semibold mb-2">Data & Analytics Intern</h3>
-                    <p class="text-gray-600 mb-2">June 2023 - August 2023</p>
-                    <ul class="list-disc pl-4">
-                        <li class="text-md mb-2">Spearheaded the design and development of interactive dashboards using Figma and Tableau, resulting in a significantly enhanced user experience for business partners</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="container mx-auto flex flex-col lg:flex-row items-start lg:items-start">
+        <!-- Tabs -->
+        <div class="w-full lg:w-1/4 mb-6 lg:mb-0 lg:mr-4">
+            <ul class="flex lg:flex-col border-b lg:border-r lg:border-b-0 border-gray-300">
+                <li class="cursor-pointer py-4 px-6 hover:bg-purple-100 transition duration-300 ease-in-out active-tab" onclick="openTab(event, 'discover')">Discover Financial Services</li>
+                <li class="cursor-pointer py-4 px-6 hover:bg-purple-100 transition duration-300 ease-in-out" onclick="openTab(event, 'sentry')">Sentry</li>
+            </ul>
         </div>
 
-        <div class="max-w-md mx-4 mb-8">
-            <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
-                <img src="./images/sentry.png" alt="Sentry" class="mr-4 h-12">
-                <div class="flex-grow">
-                    <h3 class="text-xl font-semibold mb-2">Data Engineer Intern</h3>
-                    <p class="text-gray-600 mb-2">May 2022 - May 2023</p>
-                    <ul class="list-disc pl-4">
-                        <li class="text-md mb-2">Collaborated with a team to implement an Admin page to facilitate in monitoring the processes of moving data into Sentry’s data lake</li>
-                    </ul>
+        <!-- Tab Content -->
+        <div class="w-full lg:w-3/4 lg:px-0">
+            <div id="discover" class="tab-content">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start max-w-xl mx-auto transition transform hover:scale-105 duration-300 ease-in-out">
+                    <img src="./images/discover.jpg" alt="Discover Financial Services" class="mr-4 h-16">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Data & Analytics Intern</h3>
+                        <p class="text-gray-600 mb-2">June 2023 - August 2023</p>
+                        <ul class="list-disc pl-4">
+                            <li class="text-md mb-2">Spearheaded the design and development of interactive dashboards using Figma and Tableau, resulting in a significantly enhanced user experience for business partners</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sentry" class="tab-content hidden">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start max-w-xl mx-auto transition transform hover:scale-105 duration-300 ease-in-out">
+                    <img src="./images/sentry.png" alt="Sentry" class="mr-4 h-12">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Data Engineer Intern</h3>
+                        <p class="text-gray-600 mb-2">May 2022 - May 2023</p>
+                        <ul class="list-disc pl-4">
+                            <li class="text-md mb-2">Collaborated with a team to implement an Admin page to facilitate in monitoring the processes of moving data into Sentry’s data lake</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Projects Section -->
 <section id="projects"
@@ -205,15 +225,45 @@
 <script src="./particles.js-master/demo/js/lib/stats.js"></script>
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
+
+    function openTab(event, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.add("hidden");
+        }
+        tablinks = document.querySelectorAll(".active-tab");
+        tablinks.forEach(function (tablink) {
+            tablink.classList.remove("bg-purple-200");
+            tablink.classList.remove("active-tab");
+        });
+        document.getElementById(tabName).classList.remove("hidden");
+        event.currentTarget.classList.add("bg-purple-200");
+        event.currentTarget.classList.add("active-tab");
+    }
+
+
 </script>
 
 </body>
 </html>
+
+
+<style>
+    .active-tab {
+        font-weight: bold;
+        background-color: #D8BFD8;
+    }
+    .tab-content {
+        transition: opacity 0.3s ease-in-out;
+    }
+</style>
+
