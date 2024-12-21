@@ -94,50 +94,49 @@
 </section>
 
 
-<!-- Experiences -->
-<section id="experience" class="bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32" style="background-color: #DBD3D8;">
-    <div class="container mx-auto text-center mb-8">
-        <h2 class="text-3xl font-bold">Experiences</h2>
-    </div>
+<!-- Experiences Section -->
+<section id="experience" class="bg-gray-50 py-20 sm:py-24 lg:py-28" style="background-color: #F4F0F5;">
+    <div class="container mx-auto px-4">
 
-    
-
-    <div class="container mx-auto flex flex-col lg:flex-row items-start lg:items-start">
-        <!-- Tabs -->
-        <div class="w-full lg:w-1/4 mb-6 lg:mb-0 lg:mr-4">
-            <ul class="flex lg:flex-col border-b lg:border-r lg:border-b-0 border-gray-300">
-                <li class="cursor-pointer py-4 px-6 hover:bg-purple-100 transition duration-300 ease-in-out active-tab" onclick="openTab(event, 'discover')">Discover Financial Services</li>
-                <li class="cursor-pointer py-4 px-6 hover:bg-purple-100 transition duration-300 ease-in-out" onclick="openTab(event, 'sentry')">Sentry</li>
-            </ul>
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-800 tracking-wide">Experiences</h2>
+            <p class="text-lg text-gray-600 mt-2">A snapshot of my professional journey so far.</p>
         </div>
 
-        <!-- Tab Content -->
-        <div class="w-full lg:w-3/4 lg:px-0">
-            <div id="discover" class="tab-content">
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-start max-w-xl mx-auto transition transform hover:scale-105 duration-300 ease-in-out">
+        <!-- Experiences Stack -->
+        <div class="flex flex-col gap-8 items-center">
+            
+            <!-- Discover Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 w-full max-w-3xl">
+                <div class="flex items-center mb-4">
                     <img src="./images/discover.jpg" alt="Discover Financial Services" class="mr-4 h-16">
-                    <div class="flex-grow">
-                        <h3 class="text-xl font-semibold mb-2">Data & Analytics Intern</h3>
-                        <p class="text-gray-600 mb-2">June 2023 - August 2023</p>
-                        <ul class="list-disc pl-4">
-                            <li class="text-md mb-2">Spearheaded the design and development of interactive dashboards using Figma and Tableau, resulting in a significantly enhanced user experience for business partners</li>
-                        </ul>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">Discover Financial Services</h3>
+                        <p class="text-gray-600 text-md">Data & Analytics Intern</p>
+                        <p class="text-gray-500 text-sm">June 2023 - August 2023</p>
                     </div>
                 </div>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Designed and developed interactive dashboards using Figma and Tableau, enhancing user experience for business partners.</li>
+                </ul>
             </div>
 
-            <div id="sentry" class="tab-content hidden">
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-start max-w-xl mx-auto transition transform hover:scale-105 duration-300 ease-in-out">
+            <!-- Sentry Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 w-full max-w-3xl">
+                <div class="flex items-center mb-4">
                     <img src="./images/sentry.png" alt="Sentry" class="mr-4 h-12">
-                    <div class="flex-grow">
-                        <h3 class="text-xl font-semibold mb-2">Data Engineer Intern</h3>
-                        <p class="text-gray-600 mb-2">May 2022 - May 2023</p>
-                        <ul class="list-disc pl-4">
-                            <li class="text-md mb-2">Collaborated with a team to implement an Admin page to facilitate in monitoring the processes of moving data into Sentry’s data lake</li>
-                        </ul>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">Sentry</h3>
+                        <p class="text-gray-600 text-md">Data Engineer Intern</p>
+                        <p class="text-gray-500 text-sm">May 2022 - May 2023</p>
                     </div>
                 </div>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Implemented an admin page to monitor data migration processes into Sentry’s data lake.</li>
+                </ul>
             </div>
+
         </div>
     </div>
 </section>
@@ -155,56 +154,57 @@
 
 
 <!-- Projects Section -->
-<section id="projects" class="bg-gray-300 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32" style="background-color: #D8B4A0;">
-    <div class="container mx-auto text-center flex flex-wrap justify-center">
+<section id="projects" class="bg-gray-100 py-20 sm:py-24 lg:py-28" style="background-color: #F5E5DC;">
+    <div class="container mx-auto px-4">
 
-        <div class="container mx-auto text-center mb-8">
-            <h2 class="text-3xl font-bold">Projects</h2>
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-800 tracking-wide">Projects</h2>
+            <p class="text-lg text-gray-600 mt-2">Discover some of the exciting projects I’ve worked on.</p>
         </div>
 
-        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
-
+        <!-- Projects Grid -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
 
             <!-- Project 1 -->
-            <div class="max-w-md mx-auto mb-8 transform transition duration-500 ease-in-out hover:scale-105">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-4">Photography Portfolio Website</h3>
-                    <ul class="list-disc pl-4 mb-4">
-                        <li class="text-lg md:text-xl mb-2">Built a dynamic photography portfolio using
-                            <img src="./images/nextjsreact.png" alt="Next.js" class="inline h-8 mx-1" />,
-                            <img src="./images/typescript.png" alt="TypeScript" class="inline h-8 mx-1" /> and
-                            <img src="./images/tailwindcss.svg" alt="Tailwind CSS" class="inline h-8 mx-1" />
-                            to showcase my best photos taken with my camera in an engaging and responsive user interface.
-                        </li>
-                    </ul>
-                    <a href="https://arnavkarnikphotos.com/" target="_blank" class="inline-block bg-gray-400 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md text-center mt-4">Explore Portfolio</a>
+            <div class="max-w-sm w-full bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Photography Portfolio Website</h3>
+                    <p class="text-gray-600 text-lg mb-4">
+                        Built a dynamic portfolio using
+                        <img src="./images/nextjsreact.png" alt="Next.js" class="inline h-10 mx-1 align-middle" />,
+                        <img src="./images/typescript.png" alt="TypeScript" class="inline h-14 mx-1 align-middle" />,
+                        and <img src="./images/tailwindcss.svg" alt="Tailwind CSS" class="inline h-7 mx-1 align-middle" />
+                        to showcase my photography in an engaging, responsive interface.
+                    </p>
+                    <a href="https://arnavkarnikphotos.com/" target="_blank" class="block w-full bg-blue-500 hover:bg-blue-600 text-white text-center font-medium py-2 rounded-md transition">Explore Portfolio</a>
                 </div>
             </div>
 
-
             <!-- Project 2 -->
-            <div class="max-w-md mx-auto mb-8 transform transition duration-500 ease-in-out hover:scale-105">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-4">Free Throw Percentage Tracker</h3>
-                    <ul class="list-disc pl-4 mb-4">
-                        <li class="text-lg md:text-xl mb-2">Developed a comprehensive Free Throw Percentage Tracker application using 
-                            <img src="./images/react.png" alt="React" class="inline h-8 mx-1" />,
-                            <img src="./images/tailwindcss.svg" alt="Tailwind CSS" class="inline h-8 mx-1" />, and
-                            <img src="./images/firebase.png" alt="Firebase" class="inline h-8 mx-1" />
-                            to help users track and analyze their free throw shooting performance through various metrics.
-                        </li>
-                        <li class="text-lg md:text-xl mb-2">Webscraped NBA player data using  
-                            <img src="./images/python.png" alt="Python" class="inline h-8 mx-1" />
-                            to store their free throw percentages for comparison with the current user's shooting data.
-                        </li>
-                    </ul>
-                    <a href="https://freethrowtrackerapp.web.app/" target="_blank" class="inline-block bg-gray-400 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md text-center mt-4">Track Your Free Throws</a>
+            <div class="max-w-sm w-full bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Free Throw Percentage Tracker</h3>
+                    <p class="text-gray-600 text-lg mb-4">
+                        Developed an app using
+                        <img src="./images/react.png" alt="React" class="inline h-9 mx-1 align-middle" />,
+                        <img src="./images/tailwindcss.svg" alt="Tailwind CSS" class="inline h-7 mx-1 align-middle" />,
+                        and <img src="./images/firebase.png" alt="Firebase" class="inline h-8 mx-1 align-middle" />
+                        to track and analyze a user's free throw shooting performance.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-4">
+                        Webscraped NBA data using
+                        <img src="./images/python.png" alt="Python" class="inline h-9 mx-1 align-middle" />
+                        to compare user shooting data with NBA players.
+                    </p>
+                    <a href="https://freethrowtrackerapp.web.app/" target="_blank" class="block w-full bg-blue-500 hover:bg-blue-600 text-white text-center font-medium py-2 rounded-md transition">Track Your Free Throws</a>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
 
 <!-- Footer -->
 <footer class="bg-gray-800 text-white py-4" style="background-color: #D77A61;">
