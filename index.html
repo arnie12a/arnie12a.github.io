@@ -95,56 +95,53 @@
 
 
 <!-- Experiences Section -->
-<section id="experience" class="bg-gray-50 py-20 sm:py-24 lg:py-28" style="background-color: #F4F0F5;">
+<section id="experience" class="bg-gray-50 py-20 sm:py-24 lg:py-28">
     <div class="container mx-auto px-4">
-
+        
         <!-- Section Header -->
         <div class="text-center mb-12">
             <h2 class="text-4xl font-extrabold text-gray-800 tracking-wide">Experiences</h2>
             <p class="text-lg text-gray-600 mt-2">A snapshot of my professional journey so far.</p>
         </div>
-
-        <!-- Experiences Stack -->
-        <div class="flex flex-col gap-8 items-center">
+        
+        <!-- Experience Cards -->
+        <div id="experience-container" class="flex flex-col lg:flex-row lg:justify-center lg:space-x-6 items-center space-y-6 lg:space-y-0"></div>
+        
+        <script>
+            const experiences = [
+                { image: "./images/discover.jpg", role: "Data Science Analyst", date: "August 2024 - Present" },
+                { image: "./images/discover.jpg", role: "Data & Analytics Intern", date: "June 2023 - August 2023" },
+                { image: "./images/sentry.png", role: "Data Engineer Intern", date: "May 2022 - May 2023" }
+            ];
             
-            
-
-
-            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 w-full max-w-3xl">
+            const container = document.getElementById("experience-container");
+            experiences.forEach(exp => {
+                const card = document.createElement("div");
+                card.className = "bg-white p-6 rounded-lg shadow-lg w-80 transition-transform hover:scale-105 flex flex-col items-center";
                 
+                const img = document.createElement("img");
+                img.src = exp.image;
+                img.alt = exp.role;
+                img.className = "h-16 mb-4";
                 
-
-                <div class="flex items-center mb-4">
-                    <img src="./images/discover.jpg" alt="Discover Financial Services" class="mr-4 h-16">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Discover Financial Services</h3>
-                        <p class="text-gray-600 text-md">Data & Analytics Intern</p>
-                        <p class="text-gray-500 text-sm">June 2023 - August 2023</p>
-                    </div>
-                </div>
-                <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
-                    <li>Designed and developed interactive dashboards using Figma and Tableau, enhancing user experience for business partners.</li>
-                </ul>
-            </div>
-
-            <!-- Sentry Card -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 w-full max-w-3xl">
-                <div class="flex items-center mb-4">
-                    <img src="./images/sentry.png" alt="Sentry" class="mr-4 h-12">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Sentry</h3>
-                        <p class="text-gray-600 text-md">Data Engineer Intern</p>
-                        <p class="text-gray-500 text-sm">May 2022 - May 2023</p>
-                    </div>
-                </div>
-                <ul class="list-disc pl-6 text-gray-700 space-y-2">
-                    <li>Implemented an admin page to monitor data migration processes into Sentry’s data lake.</li>
-                </ul>
-            </div>
-
-        </div>
+                const role = document.createElement("p");
+                role.className = "text-gray-800 text-xl font-bold mb-2";
+                role.innerText = exp.role;
+                
+                const date = document.createElement("p");
+                date.className = "text-gray-500 text-sm";
+                date.innerText = exp.date;
+                
+                card.appendChild(img);
+                card.appendChild(role);
+                card.appendChild(date);
+                container.appendChild(card);
+            });
+        </script>
     </div>
 </section>
+
+
 
 
 <!-- Projects Section -->
