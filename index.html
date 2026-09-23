@@ -3,15 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>Arnav Karnik</title>
-    <meta name="description" content="Arnav Karnik — Software Engineer & Photographer.">
+    <meta name="description" content="Arnav Karnik — Data Scientist, Sports Tech Enthusiast & Photographer.">
     <link rel="icon" href="/images/vibes.png">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+        rel="stylesheet"
+    >
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         :root {
             --bg-primary: #16232B;
@@ -25,107 +39,438 @@
             --text-dark: #22313A;
         }
 
-        body { font-family: 'Inter', sans-serif; color: var(--text-dark); }
-        .font-display { font-family: 'Fraunces', serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-
-        .bg-primary { background-color: var(--bg-primary); }
-        .bg-primary-deep { background-color: var(--bg-primary-deep); }
-        .bg-panel { background-color: var(--bg-panel); }
-        .bg-cream { background-color: var(--bg-cream); }
-        .text-light { color: var(--text-light); }
-        .text-muted { color: var(--text-muted); }
-        .text-gold { color: var(--accent-gold); }
-        .text-terracotta { color: var(--accent-terracotta); }
-        .bg-gold { background-color: var(--accent-gold); }
-        .bg-terracotta { background-color: var(--accent-terracotta); }
-        .border-gold { border-color: var(--accent-gold); }
-
-        /* Mobile menu */
-        .mobile-menu-button { display: none; }
-        @media (max-width: 768px) {
-            .hidden-mobile { display: none; }
-            .mobile-menu-button { display: block; }
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Nav link underline */
-        .nav-link { position: relative; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+        }
+
+        .font-display {
+            font-family: 'Fraunces', serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .bg-primary {
+            background-color: var(--bg-primary);
+        }
+
+        .bg-primary-deep {
+            background-color: var(--bg-primary-deep);
+        }
+
+        .bg-panel {
+            background-color: var(--bg-panel);
+        }
+
+        .bg-cream {
+            background-color: var(--bg-cream);
+        }
+
+        .text-light {
+            color: var(--text-light);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        .text-gold {
+            color: var(--accent-gold);
+        }
+
+        .text-terracotta {
+            color: var(--accent-terracotta);
+        }
+
+        .bg-gold {
+            background-color: var(--accent-gold);
+        }
+
+        .bg-terracotta {
+            background-color: var(--accent-terracotta);
+        }
+
+        .border-gold {
+            border-color: var(--accent-gold);
+        }
+
+        /* Mobile menu */
+        .mobile-menu-button {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .hidden-mobile {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+        }
+
+        /* Navigation underline */
+        .nav-link {
+            position: relative;
+        }
+
         .nav-link::after {
             content: "";
             position: absolute;
-            left: 0; bottom: -4px;
-            width: 0%; height: 1.5px;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 1.5px;
             background-color: var(--accent-gold);
             transition: width 0.25s ease;
         }
-        .nav-link:hover::after { width: 100%; }
 
-        .icon-link { color: var(--text-light); opacity: 0.85; transition: opacity 0.2s ease, transform 0.2s ease; }
-        .icon-link:hover { opacity: 1; transform: translateY(-1px); }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .icon-link {
+            color: var(--text-light);
+            opacity: 0.85;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .icon-link:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
 
         /* Scroll cue */
         @keyframes bounceDown {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(8px); opacity: 1; }
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(8px);
+                opacity: 1;
+            }
         }
-        .scroll-cue { animation: bounceDown 2s ease-in-out infinite; }
+
+        .scroll-cue {
+            animation: bounceDown 2s ease-in-out infinite;
+        }
 
         /* Camera widget */
         .camera-body {
-            background: linear-gradient(160deg, #23343E 0%, #16232B 100%);
-            border: 1px solid rgba(228,169,79,0.15);
+            background: linear-gradient(
+                160deg,
+                #23343E 0%,
+                #16232B 100%
+            );
+            border: 1px solid rgba(228, 169, 79, 0.15);
         }
-        .camera-screen { aspect-ratio: 3 / 2; background: #0B1216; }
-        .camera-screen img { transition: opacity 0.25s ease; }
-        .af-bracket { position: absolute; width: 22px; height: 22px; border: 2px solid var(--accent-gold); opacity: 0.75; }
-        .af-tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
-        .af-tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
-        .af-bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
-        .af-br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
 
-        .camera-dot { width: 8px; height: 8px; border-radius: 9999px; background-color: rgba(159,176,182,0.4); transition: all 0.2s ease; cursor: pointer; border: none; }
-        .camera-dot.active { background-color: var(--accent-gold); width: 20px; border-radius: 9999px; }
+        .camera-screen {
+            aspect-ratio: 3 / 2;
+            background: #0B1216;
+        }
+
+        .camera-screen img {
+            transition: opacity 0.25s ease;
+        }
+
+        .af-bracket {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border: 2px solid var(--accent-gold);
+            opacity: 0.75;
+        }
+
+        .af-tl {
+            top: 16px;
+            left: 16px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .af-tr {
+            top: 16px;
+            right: 16px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .af-bl {
+            bottom: 16px;
+            left: 16px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .af-br {
+            bottom: 16px;
+            right: 16px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .camera-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background-color: rgba(159, 176, 182, 0.4);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .camera-dot.active {
+            background-color: var(--accent-gold);
+            width: 20px;
+            border-radius: 9999px;
+        }
 
         .shutter-btn {
-            background: radial-gradient(circle at 35% 30%, #F0C066, var(--accent-terracotta) 70%);
-            box-shadow: 0 3px 0 rgba(0,0,0,0.35), 0 4px 10px rgba(0,0,0,0.4);
+            background: radial-gradient(
+                circle at 35% 30%,
+                #F0C066,
+                var(--accent-terracotta) 70%
+            );
+            box-shadow:
+                0 3px 0 rgba(0, 0, 0, 0.35),
+                0 4px 10px rgba(0, 0, 0, 0.4);
             transition: transform 0.08s ease;
         }
-        .shutter-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(0,0,0,0.35); }
+
+        .shutter-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+        }
 
         .shutter-flash {
-            position: absolute; inset: 0; background: white; opacity: 0;
-            pointer-events: none; transition: opacity 0.12s ease;
+            position: absolute;
+            inset: 0;
+            background: white;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.12s ease;
         }
 
         .arrow-btn {
-            transition: background-color 0.2s ease, transform 0.15s ease;
+            transition:
+                background-color 0.2s ease,
+                transform 0.15s ease;
         }
-        .arrow-btn:hover { transform: scale(1.06); }
 
-        .edu-card { border-left: 3px solid var(--accent-gold); }
+        .arrow-btn:hover {
+            transform: scale(1.06);
+        }
 
-        .divider-dot { width: 5px; height: 5px; border-radius: 9999px; background-color: var(--accent-gold); display: inline-block; }
+        /* About photo slider */
+        .about-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.25rem;
+            background: #0B1216;
+        }
+
+        .about-slider img {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            transition: opacity 0.25s ease;
+        }
+
+        .about-slider-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1.25rem;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.82),
+                rgba(0, 0, 0, 0)
+            );
+        }
+
+        .slider-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 9999px;
+            background: rgba(16, 26, 32, 0.75);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .slider-control:hover {
+            background: rgba(16, 26, 32, 0.95);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .slider-prev {
+            left: 16px;
+        }
+
+        .slider-next {
+            right: 16px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 16px;
+            display: flex;
+            gap: 7px;
+        }
+
+        .slider-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 9999px;
+            background: rgba(255,255,255,0.45);
+            transition: all 0.2s ease;
+        }
+
+        .slider-dot.active {
+            width: 20px;
+            background: var(--accent-gold);
+        }
+
+        /* Education */
+        .edu-card {
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .divider-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 9999px;
+            background-color: var(--accent-gold);
+            display: inline-block;
+        }
+
+        /* Experience */
+        .experience-card {
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.22);
+        }
+
+        .company-mark {
+            width: 58px;
+            height: 58px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(228, 169, 79, 0.12);
+            border: 1px solid rgba(228, 169, 79, 0.18);
+            color: var(--accent-gold);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .experience-bullet {
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .experience-bullet::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            width: 5px;
+            height: 5px;
+            background: var(--accent-gold);
+            border-radius: 9999px;
+        }
+
+        /* Project cards */
+        .project-card {
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(22, 35, 43, 0.08);
+        }
+
+        @media (max-width: 768px) {
+            .about-slider img {
+                height: 360px;
+            }
+        }
     </style>
 </head>
+
 <body class="bg-cream">
 
-<!-- Navigation -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav class="bg-primary p-4 text-white fixed w-full z-30 shadow-lg">
     <div class="container mx-auto flex justify-between items-center">
 
-        <!-- Logo -->
-        <a href="#particles-js" class="font-display text-xl md:text-2xl font-semibold tracking-wide text-light">Arnav Karnik</a>
+        <a
+            href="#particles-js"
+            class="font-display text-xl md:text-2xl font-semibold tracking-wide text-light"
+        >
+            Arnav Karnik
+        </a>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="mobile-menu-button text-white hover:text-gold focus:outline-none md:hidden" aria-label="Toggle menu">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        <button
+            id="mobile-menu-button"
+            class="mobile-menu-button text-white hover:text-gold focus:outline-none md:hidden"
+            aria-label="Toggle menu"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-6 w-6"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
             </svg>
         </button>
 
-        <!-- Nav Links + Social Icons -->
         <div class="hidden md:flex items-center space-x-10">
+
             <div class="flex space-x-8 font-mono text-sm tracking-wide uppercase">
                 <a href="#particles-js" class="nav-link hover:text-gold transition">Home</a>
                 <a href="#about" class="nav-link hover:text-gold transition">About</a>
@@ -135,443 +480,1622 @@
             </div>
 
             <div class="flex items-center space-x-4 pl-6 border-l border-white/20">
-                <a href="mailto:arnav.n.karnik@gmail.com" class="icon-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+
+                <a
+                    href="mailto:arnav.n.karnik@gmail.com"
+                    class="icon-link"
+                    aria-label="Email"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
                     </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/arnavkarnik/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+
+                <a
+                    href="https://www.linkedin.com/in/arnavkarnik/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon-link"
+                    aria-label="LinkedIn"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                        />
                     </svg>
                 </a>
-                <a href="https://github.com/arnie12a" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.13-4.56-5.02 0-1.11.39-2.02 1.03-2.73-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.04a9.3 9.3 0 015 0c1.9-1.31 2.74-1.04 2.74-1.04.56 1.42.21 2.47.1 2.73.65.71 1.03 1.62 1.03 2.73 0 3.9-2.35 4.76-4.58 5.01.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0022 12.19C22 6.58 17.52 2 12 2z"/>
+
+                <a
+                    href="https://github.com/arnie12a/Projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon-link"
+                    aria-label="GitHub"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.13-4.56-5.02 0-1.11.39-2.02 1.03-2.73 0 0 .84-.27 2.75 1.04a9.3 9.3 0 015 0c1.9-1.31 2.74-1.04 2.74-1.04.56 1.42.21 2.47.1 2.73.65.71 1.03 1.62 1.03 2.73 0 3.9-2.35 4.76-4.58 5.01.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0022 12.19C22 6.58 17.52 2 12 2z"
+                        />
                     </svg>
                 </a>
+
             </div>
         </div>
-
     </div>
 </nav>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="md:hidden fixed top-[60px] left-0 bg-primary-deep w-full hidden z-20 shadow-xl">
+<!-- =========================
+     MOBILE MENU
+========================= -->
+<div
+    id="mobile-menu"
+    class="md:hidden fixed top-[60px] left-0 bg-primary-deep w-full hidden z-20 shadow-xl"
+>
     <div class="flex flex-col space-y-5 p-6 font-mono text-sm uppercase tracking-wide text-light">
         <a href="#particles-js" class="hover:text-gold transition">Home</a>
         <a href="#about" class="hover:text-gold transition">About</a>
         <a href="#experience" class="hover:text-gold transition">Experience</a>
         <a href="#projects" class="hover:text-gold transition">Projects</a>
         <a href="#photography" class="hover:text-gold transition">Photography</a>
+
         <div class="flex items-center space-x-5 pt-4 border-t border-white/10">
-            <a href="mailto:arnav.n.karnik@gmail.com" class="icon-link" aria-label="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+
+            <a
+                href="mailto:arnav.n.karnik@gmail.com"
+                class="icon-link"
+                aria-label="Email"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/arnavkarnik/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+
+            <a
+                href="https://www.linkedin.com/in/arnavkarnik/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-link"
+                aria-label="LinkedIn"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                    />
                 </svg>
             </a>
-            <a href="https://github.com/arnie12a" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.13-4.56-5.02 0-1.11.39-2.02 1.03-2.73-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.04a9.3 9.3 0 015 0c1.9-1.31 2.74-1.04 2.74-1.04.56 1.42.21 2.47.1 2.73.65.71 1.03 1.62 1.03 2.73 0 3.9-2.35 4.76-4.58 5.01.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0022 12.19C22 6.58 17.52 2 12 2z"/>
+
+            <a
+                href="https://github.com/arnie12a"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-link"
+                aria-label="GitHub"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.13-4.56-5.02 0-1.11.39-2.02 1.03-2.73.65.71 1.03 1.62 1.03 2.73 0 3.9-2.35 4.76-4.58 5.01.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0022 12.19C22 6.58 17.52 2 12 2z"
+                    />
                 </svg>
             </a>
+
         </div>
     </div>
 </div>
 
-<!-- Hero Section -->
-<header id="particles-js" class="relative bg-primary text-white text-center py-20 h-screen flex items-center justify-center overflow-hidden">
+<!-- =========================
+     HERO
+========================= -->
+<header
+    id="particles-js"
+    class="relative bg-primary text-white text-center py-20 h-screen flex items-center justify-center overflow-hidden"
+>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="container mx-auto px-4">
-            <p class="font-mono text-xs md:text-sm tracking-[0.3em] text-gold uppercase mb-4" data-aos="fade-up">Data Scientist <span class="divider-dot mx-2 align-middle"></span> Photographer</p>
-            <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 text-light" data-aos="fade-up" data-aos-delay="100">Arnav Karnik</h1>
-            <h3 class="text-base md:text-lg text-muted max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                Pursuing Sports Tech and Nature Photography!
+
+            <p
+                class="font-mono text-xs md:text-sm tracking-[0.3em] text-gold uppercase mb-4"
+                data-aos="fade-up"
+            >
+                Data Scientist
+                <span class="divider-dot mx-2 align-middle"></span>
+                Photographer
+            </p>
+
+            <h1
+                class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 text-light"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+                Arnav Karnik
+            </h1>
+
+            <h3
+                class="text-base md:text-lg text-muted max-w-xl mx-auto"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                Pursuing Sports Tech and Photography.
             </h3>
         </div>
     </div>
-    <a href="#about" class="scroll-cue absolute bottom-10 left-1/2 -translate-x-1/2 text-muted">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+
+    <a
+        href="#about"
+        class="scroll-cue absolute bottom-10 left-1/2 transform -translate-x-1/2 text-muted"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+            />
         </svg>
     </a>
 </header>
 
-<!-- About Me Section -->
+<!-- =========================
+     ABOUT
+========================= -->
 <section id="about" class="bg-cream py-20 sm:py-24 lg:py-28">
-  <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4">
 
-    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-      <div data-aos="fade-right" class="flex justify-center">
-        <img src="images/arnie.JPG" alt="profile picture"
-          class="rounded-lg w-auto h-72 md:h-96 shadow-xl object-cover"/>
-      </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
 
-      <div data-aos="fade-left">
-        <p class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3">About</p>
-        <h2 class="font-display text-3xl md:text-4xl font-semibold text-gray-800 mb-6">A bit about me</h2>
-        <p class="text-lg text-gray-700 mb-5 leading-relaxed">
-          I'm a Computer Science master's student at the University of Colorado Boulder. Some languages I like to code in are Python & Javascript.
-        </p>
-        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-          When I'm not coding, you'll usually find me playing soccer or basketball, experimenting with
-          photography, crocheting something new, or solving Rubik’s cubes way faster than I probably
-          should. Check out some of my photography in the
-          <a href="#photography" class="text-terracotta underline hover:text-gray-800 transition font-medium">Photography</a>
-          section below.
-        </p>
-      </div>
-      
-    </div>
+            <!-- About Text -->
+            <div data-aos="fade-right">
 
-    <!-- Education -->
-    <div data-aos="fade-up">
-      <p class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3 text-center">Education</p>
-      <h2 class="font-display text-3xl font-semibold text-gray-800 mb-10 text-center">Where I've studied</h2>
+                <p class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3">
+                    About
+                </p>
 
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="edu-card bg-white rounded-r-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="0">
-          <p class="font-mono text-xs text-gray-400 uppercase tracking-wide mb-1">Sep 2020 — Dec 2023</p>
-          <h3 class="font-display text-xl font-semibold text-gray-800 mb-1">University of Wisconsin–Madison</h3>
-          <p class="text-gray-600">B.S. in Computer Science & Data Science</p>
+                <h2 class="font-display text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
+                    A bit about me
+                </h2>
+
+                <p class="text-lg text-gray-700 mb-5 leading-relaxed">
+                    I'm a Computer Science master's student at the University of
+                    Colorado Boulder with a background in computer science and data science. 
+                </p>
+
+                <p class="text-lg text-gray-700 mb-5 leading-relaxed">
+                    I am particularly interested in using data and softare to build technology for sports. 
+                    Outside of coding, you will find me playing soccer or basketball, hiking and taking photos with my camera, or solving rubiks cubes.
+                </p>
+
+
+                
+            </div>
+
+            <!-- About Photo Slider -->
+            <div data-aos="fade-left">
+
+                <div class="about-slider shadow-2xl">
+
+                    <img
+                        id="aboutSliderImage"
+                        src="./images/parisHoops.jpg"
+                        alt="Photo representing Arnav's interests"
+                    >
+
+                    <div class="about-slider-caption">
+
+                        <p
+                            id="aboutSliderTitle"
+                            class="font-display text-2xl font-semibold text-white mb-1"
+                        >
+                            Sports & Competition
+                        </p>
+
+                        <p
+                            id="aboutSliderCaption"
+                            class="text-sm text-gray-200"
+                        >
+                            I spend plenty of time on the court and the soccer field.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="changeAboutPhoto(-1)"
+                        class="slider-control slider-prev"
+                        aria-label="Previous about photo"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                    </button>
+
+                    <button
+                        onclick="changeAboutPhoto(1)"
+                        class="slider-control slider-next"
+                        aria-label="Next about photo"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </button>
+
+                    <div id="aboutSliderDots" class="slider-dots"></div>
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="edu-card bg-white rounded-r-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="150">
-          <p class="font-mono text-xs text-gray-400 uppercase tracking-wide mb-1">Aug 2026 — May 2028</p>
-          <h3 class="font-display text-xl font-semibold text-gray-800 mb-1">University of Colorado Boulder</h3>
-          <p class="text-gray-600">M.S. in Computer Science</p>
-        </div>
-      </div>
-    </div>
+        <!-- Education -->
+        <div data-aos="fade-up">
 
-  </div>
+            <p class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3 text-center">
+                Education
+            </p>
+
+            <h2 class="font-display text-3xl font-semibold text-gray-800 mb-10 text-center">
+                Where I've studied
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+                <div
+                    class="edu-card bg-white rounded-r-lg shadow-md p-6"
+                    data-aos="fade-up"
+                >
+                    <p class="font-mono text-xs text-gray-400 uppercase tracking-wide mb-1">
+                        Sep 2020 — Dec 2023
+                    </p>
+
+                    <h3 class="font-display text-xl font-semibold text-gray-800 mb-1">
+                        University of Wisconsin–Madison
+                    </h3>
+
+                    <p class="text-gray-600">
+                        B.S. in Computer Science & Data Science
+                    </p>
+
+                    <p class="text-sm text-gray-500 mt-2">
+                        Double major in Computer Science and Data Science
+                    </p>
+                </div>
+
+                <div
+                    class="edu-card bg-white rounded-r-lg shadow-md p-6"
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                >
+                    <p class="font-mono text-xs text-gray-400 uppercase tracking-wide mb-1">
+                        Aug 2026 — May 2028
+                    </p>
+
+                    <h3 class="font-display text-xl font-semibold text-gray-800 mb-1">
+                        University of Colorado Boulder
+                    </h3>
+
+                    <p class="text-gray-600">
+                        M.S. in Computer Science
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<!-- Experiences Section -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
 <section id="experience" class="bg-primary py-20 sm:py-24 lg:py-28">
     <div class="container mx-auto px-4">
 
-      <div class="text-center mb-14" data-aos="fade-down">
-        <p class="font-mono text-xs tracking-[0.2em] text-gold uppercase mb-3">Experience</p>
-        <h2 class="font-display text-4xl font-semibold text-light mb-4">A snapshot of my professional journey</h2>
-        <a href="./ArnavKarnikResume2026September.pdf" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide bg-gold text-primary-deep font-semibold px-6 py-3 rounded-md hover:opacity-90 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/>
-          </svg>
-          View My Resume
-        </a>
-      </div>
+        <div class="text-center mb-14" data-aos="fade-down">
 
-      <div id="experience-container"
-        class="flex flex-col lg:flex-row lg:justify-center lg:space-x-6 items-center space-y-6 lg:space-y-0"></div>
+            <p class="font-mono text-xs tracking-[0.2em] text-gold uppercase mb-3">
+                Experience
+            </p>
 
-      <script>
-        const experiences = [
-          { image: "./images/discover.jpg", role: "Data Science Analyst", date: "August 2024 - Present" },
-          { image: "./images/discover.jpg", role: "Data & Analytics Intern", date: "June 2023 - August 2023" },
-          { image: "./images/sentry.png", role: "Data Engineer Intern", date: "May 2022 - May 2023" }
-        ];
+         
 
-        const container = document.getElementById("experience-container");
+            <a
+                href="./ArnavKarnikResume2026September.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide bg-gold text-primary-deep font-semibold px-6 py-3 rounded-md hover:opacity-90 transition"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+                    />
+                </svg>
+                View My Resume
+            </a>
 
-        experiences.forEach((exp, index) => {
-          const card = document.createElement("div");
-          card.className = "bg-panel p-6 rounded-lg shadow-lg w-80 transition-transform hover:scale-105 flex flex-col items-center";
+        </div>
 
-          card.setAttribute("data-aos", "fade-up");
-          card.setAttribute("data-aos-delay", `${index * 200}`);
-          card.setAttribute("data-aos-duration", "1000");
+        <div
+            id="experience-container"
+            class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto"
+        ></div>
 
-          const img = document.createElement("img");
-          img.src = exp.image;
-          img.alt = exp.role;
-          img.className = "h-16 mb-4 rounded";
+    </div>
+</section>
 
-          const role = document.createElement("p");
-          role.className = "text-light text-xl font-semibold mb-2 font-display";
-          role.innerText = exp.role;
+<!-- =========================
+     PROJECTS
+========================= -->
+<section id="projects" class="py-24 bg-cream">
+    <div class="container mx-auto px-4">
 
-          const date = document.createElement("p");
-          date.className = "text-muted text-sm font-mono";
-          date.innerText = exp.date;
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-down">
 
-          card.appendChild(img);
-          card.appendChild(role);
-          card.appendChild(date);
-          container.appendChild(card);
+            <p class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3">
+                Projects
+            </p>
+
+            <h2 class="font-display text-4xl md:text-5xl font-semibold text-gray-800">
+                Things I've built
+            </h2>
+
+        
+
+        </div>
+
+        <!-- =========================
+             PROJECT GRID
+        ========================= -->
+        <div
+            id="projects-container"
+            class="grid gap-8 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto"
+        ></div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     PROJECT MODAL
+========================= -->
+<div
+    id="project-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center px-4"
+>
+
+    <!-- Background Overlay -->
+    <div
+        id="project-modal-overlay"
+        class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"
+    ></div>
+
+    <!-- Modal -->
+    <div
+        id="project-modal-content"
+        class="relative bg-cream w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl"
+    >
+
+        <!-- Close Button -->
+        <button
+            id="project-modal-close"
+            class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-gray-800 transition"
+            aria-label="Close project"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="p-8 md:p-10">
+
+            <p
+                id="modal-project-year"
+                class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3"
+            ></p>
+
+            <h3
+                id="modal-project-title"
+                class="font-display text-3xl md:text-4xl font-semibold text-gray-800 mb-5 pr-10"
+            ></h3>
+
+            <p
+                id="modal-project-description"
+                class="text-gray-700 text-lg leading-relaxed mb-8"
+            ></p>
+
+            <!-- Technologies -->
+            <div class="mb-8">
+
+                <p class="font-mono text-xs tracking-[0.15em] text-gray-400 uppercase mb-3">
+                    Built With
+                </p>
+
+                <div
+                    id="modal-project-tech"
+                    class="flex flex-wrap gap-2"
+                ></div>
+
+            </div>
+
+            <!-- Details -->
+            <div class="mb-8">
+
+                <p class="font-mono text-xs tracking-[0.15em] text-gray-400 uppercase mb-3">
+                    About The Project
+                </p>
+
+                <div
+                    id="modal-project-details"
+                    class="space-y-4 text-gray-700 leading-relaxed"
+                ></div>
+
+            </div>
+
+            <!-- Link -->
+            <div id="modal-project-link-container"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PROJECT DATA + JS
+========================= -->
+<script>
+
+    /*
+     * =====================================================
+     * PROJECT DATA
+     * =====================================================
+     *
+     * To add a future project:
+     *
+     * 1. Copy one of these objects.
+     * 2. Change the information.
+     * 3. Add it to this array.
+     *
+     * The website will automatically create the card
+     * and modal for the new project.
+     */
+
+    const projects = [
+
+        {
+            title: "Photography Portfolio",
+            year: "2026",
+            category: "Creative Technology",
+            description:
+                "Built a photography portfolio using Next.js, TypeScript, and Tailwind CSS to showcase my photography through an engaging and interactive interface.",
+            details: [
+                "Designed and developed a responsive portfolio focused on presenting photography in a clean, visual-first experience.",
+                "Used Next.js and TypeScript for the application structure and Tailwind CSS for styling.",
+                "Deployed the portfolio with Vercel."
+            ],
+            technologies: [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Vercel"
+            ],
+            link: "https://arnavkarnikphotos.com",
+            linkText: "Visit Photography Portfolio"
+        },
+
+        {
+            title: "Running Tracker",
+            year: "2025",
+            category: "Sports Tech",
+            description:
+                "Developed a running statistics visualization application to track training and prepare for my first marathon.",
+            details: [
+                "Built a Flask backend for entering and managing running data.",
+                "Created a React and TypeScript frontend to visualize training statistics.",
+                "Designed the application around tracking training progress and understanding changes in running performance over time."
+            ],
+            technologies: [
+                "Flask",
+                "React",
+                "TypeScript",
+                "Data Visualization"
+            ],
+            link: "https://running-training-app.vercel.app",
+            linkText: "View Running Tracker"
+        },
+
+        {
+            title: "Free Throw Percentage Tracker",
+            year: "2024",
+            category: "Sports Tech",
+            description:
+                "Developed an application using React, Tailwind CSS, and Firebase to track and analyze free-throw shooting performance.",
+            details: [
+                "Built an interactive web application for recording and analyzing free-throw performance.",
+                "Web-scraped NBA data using Python and the nba_api module.",
+                "Combined NBA data with information from Basketball Reference to support additional analytics.",
+                "Used Firebase for application data storage and backend functionality."
+            ],
+            technologies: [
+                "React",
+                "Tailwind CSS",
+                "Firebase",
+                "Python",
+                "nba_api"
+            ],
+            link: "https://freethrowtrackerapp.web.app",
+            linkText: "Open Free Throw Tracker"
+        },
+
+        {
+            title: "Manchester United Contribution Leader Per Season Visualization",
+            year: "2023",
+            category: "Sports Analytics",
+            description:
+                "Scraped Manchester United soccer data from FBref using Python and transformed the data into visualizations using Seaborn and Matplotlib.",
+            details: [
+                "Collected soccer statistics from FBref using Python.",
+                "Processed and organized the data for analysis.",
+                "Created visualizations using Seaborn and Matplotlib to examine player contributions across seasons."
+            ],
+            technologies: [
+                "Python",
+                "Pandas",
+                "Seaborn",
+                "Matplotlib",
+                "Web Scraping"
+            ],
+            link: "https://arnie12a.github.io/images/manchesterUnited.png",
+            linkText: "View Visualization"
+        },
+
+        {
+            title: "Basketball Shot Chart Generator",
+            year: "2022",
+            category: "Sports Technology",
+            description:
+                "Built an interactive tool for plotting basketball shots and analyzing shooting performance. This was the first project I built and published on the internet.",
+            details: [
+                "Created an interactive basketball court interface for recording shot locations.",
+                "Built functionality for visualizing makes, misses, and shot locations.",
+                "Designed a responsive interface using HTML, CSS, and JavaScript.",
+                "This project was the first application I built and published online."
+            ],
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            link: "https://arnie12a.github.io/BasketballShotchart/",
+            linkText: "Open Shot Chart"
+        }
+
+    ];
+
+
+    /*
+     * =====================================================
+     * CREATE PROJECT CARDS
+     * =====================================================
+     */
+
+    const projectsContainer =
+        document.getElementById("projects-container");
+
+    projects.forEach((project, index) => {
+
+        const card = document.createElement("button");
+
+        card.type = "button";
+
+        card.className =
+            "project-card w-full bg-white rounded-2xl shadow-lg text-left p-8 " +
+            "hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 " +
+            "focus:outline-none focus:ring-2 focus:ring-yellow-500";
+
+        card.setAttribute("data-aos", "fade-up");
+        card.setAttribute("data-aos-delay", `${index * 75}`);
+
+        card.innerHTML = `
+
+            <div class="flex items-start justify-between mb-6">
+
+                <div>
+                    <p class="font-mono text-xs tracking-[0.15em] text-terracotta uppercase mb-2">
+                        ${project.category}
+                    </p>
+
+                    <h3 class="font-display text-2xl font-semibold text-gray-800 leading-tight">
+                        ${project.title}
+                    </h3>
+                </div>
+
+                <div class="ml-4 flex-shrink-0 w-10 h-10 rounded-full bg-primary text-gold flex items-center justify-center">
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 5l7 7-7 7"
+                        />
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <p class="text-gray-600 text-base leading-relaxed mb-7">
+                ${project.description}
+            </p>
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex flex-wrap gap-2">
+
+                    ${project.technologies
+                        .slice(0, 3)
+                        .map(tech => `
+                            <span
+                                class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded-md font-mono text-xs"
+                            >
+                                ${tech}
+                            </span>
+                        `)
+                        .join("")
+                    }
+
+                    ${
+                        project.technologies.length > 3
+                        ? `
+                            <span
+                                class="px-2.5 py-1 bg-gray-100 text-gray-500 rounded-md font-mono text-xs"
+                            >
+                                +${project.technologies.length - 3}
+                            </span>
+                        `
+                        : ""
+                    }
+
+                </div>
+
+                <span class="font-mono text-sm text-gray-400 ml-4">
+                    ${project.year}
+                </span>
+
+            </div>
+        `;
+
+        card.addEventListener("click", () => {
+            openProjectModal(project);
         });
 
-        setTimeout(() => { if (window.AOS) AOS.refresh(); }, 100);
-      </script>
-    </div>
-</section>
+        projectsContainer.appendChild(card);
 
-<!-- Projects Section -->
-<section id="projects" class="py-24 bg-cream">
-  <div class="container mx-auto px-4">
+    });
 
-    <div class="text-center mb-16" data-aos="fade-down">
-      <p class="font-mono text-xs tracking-[0.2em] text-terracotta uppercase mb-3">Projects</p>
-      <h2 class="font-display text-4xl font-semibold text-gray-800">Things I've built</h2>
-    </div>
 
-    <!-- FEATURED PROJECTS -->
-    <div class="grid gap-10 md:grid-cols-2 justify-items-center mb-16">
+    /*
+     * =====================================================
+     * MODAL ELEMENTS
+     * =====================================================
+     */
 
-      <!-- Free Throw -->
-      <div data-aos="fade-up" class="max-w-md w-full bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="p-8">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-4 font-display">Free Throw Percentage Tracker</h3>
-          <p class="text-gray-600 text-lg mb-4">
-            Developed an app using
-            <img src="./images/react.png" alt="React" class="inline h-9 mx-1 align-middle" />,
-            <img src="./images/tailwindcss.svg" alt="Tailwind CSS" class="inline h-7 mx-1 align-middle" />,
-            and <img src="./images/firebase.png" alt="Firebase" class="inline h-8 mx-1 align-middle" />
-            to track and analyze a user's free throw shooting performance.
-          </p>
-          <p class="text-gray-600 text-lg mb-6">
-            Webscraped NBA data using
-            <img src="./images/python.png" alt="Python" class="inline h-9 mx-1 align-middle" />
-            and the
-            <a href="https://github.com/swar/nba_api" target="_blank" class="text-terracotta hover:text-gray-800 underline">nba_api</a>
-            module, along with data scraped from
-            <a href="https://www.basketball-reference.com/" target="_blank" class="text-terracotta hover:text-gray-800 underline">Basketball Reference</a>.
-          </p>
-          <a href="https://freethrowtrackerapp.web.app/" target="_blank"
-             class="block w-full bg-primary hover:opacity-90 text-white text-center font-medium py-3 rounded-md transition">
-            Track Your Free Throws
-          </a>
-        </div>
-      </div>
+    const modal =
+        document.getElementById("project-modal");
 
-      <!-- Shot Chart -->
-      <div data-aos="fade-up" class="max-w-md w-full bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="p-8">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-4 font-display">Basketball Shot Chart App</h3>
-          <p class="text-gray-600 text-lg mb-6">
-            Built with
-            <img src="./images/html.png" alt="HTML" class="inline h-7 mx-1 align-middle" />,
-            <img src="./images/css.png" alt="CSS" class="inline h-7 mx-1 align-middle" />, and
-            <img src="./images/javascript.png" alt="JavaScript" class="inline h-7 mx-1 align-middle" />.
-            Features an interactive interface for plotting shots and analyzing performance.
-          </p>
-          <a href="https://arnie12a.github.io/BasketballShotchart/" target="_blank"
-             class="block w-full bg-primary hover:opacity-90 text-white text-center font-medium py-3 rounded-md transition">
-            Check out App
-          </a>
-        </div>
-      </div>
-    </div>
+    const modalOverlay =
+        document.getElementById("project-modal-overlay");
 
-    <!-- OTHER PROJECTS -->
-    <div class="grid gap-8 md:grid-cols-1 justify-items-center">
-      <div data-aos="fade-up" class="max-w-sm w-full bg-white rounded-xl shadow-md transform transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-800 mb-3 font-display">Manchester United Data Visualization</h3>
-          <p class="text-gray-600 text-base mb-4">
-            Scraped soccer data from
-            <a href="https://fbref.com/en/" target="_blank" class="text-terracotta hover:underline">fbref</a>
-            using <img src="./images/python.png" alt="Python" class="inline h-8 mx-1 align-middle" />,
-            then processed and visualized with Seaborn and Matplotlib.
-          </p>
-          <a href="./images/manchesterUnited.png" target="_blank"
-             class="block w-full bg-gray-800 hover:bg-gray-900 text-white text-center font-medium py-2 rounded-md transition">
-            Check Data Viz
-          </a>
-        </div>
-      </div>
-    </div>
+    const modalClose =
+        document.getElementById("project-modal-close");
 
-  </div>
-</section>
+    const modalYear =
+        document.getElementById("modal-project-year");
 
-<!-- Photography Section -->
+    const modalTitle =
+        document.getElementById("modal-project-title");
+
+    const modalDescription =
+        document.getElementById("modal-project-description");
+
+    const modalTech =
+        document.getElementById("modal-project-tech");
+
+    const modalDetails =
+        document.getElementById("modal-project-details");
+
+    const modalLinkContainer =
+        document.getElementById("modal-project-link-container");
+
+
+    /*
+     * =====================================================
+     * OPEN MODAL
+     * =====================================================
+     */
+
+    function openProjectModal(project) {
+
+        modalYear.textContent =
+            `${project.category} · ${project.year}`;
+
+        modalTitle.textContent =
+            project.title;
+
+        modalDescription.textContent =
+            project.description;
+
+        modalTech.innerHTML =
+            project.technologies
+                .map(tech => `
+                    <span
+                        class="px-3 py-1.5 bg-white border border-gray-200 rounded-md text-gray-700 font-mono text-xs"
+                    >
+                        ${tech}
+                    </span>
+                `)
+                .join("");
+
+        modalDetails.innerHTML =
+            project.details
+                .map(detail => `
+                    <p>
+                        ${detail}
+                    </p>
+                `)
+                .join("");
+
+        modalLinkContainer.innerHTML = "";
+
+        if (project.link) {
+
+            modalLinkContainer.innerHTML = `
+                <a
+                    href="${project.link}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-primary text-white font-medium px-6 py-3 rounded-md hover:opacity-90 transition"
+                >
+                    ${project.linkText}
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                    </svg>
+                </a>
+            `;
+
+        }
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        document.body.style.overflow = "hidden";
+    }
+
+
+    /*
+     * =====================================================
+     * CLOSE MODAL
+     * =====================================================
+     */
+
+    function closeProjectModal() {
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+        document.body.style.overflow = "";
+    }
+
+
+    modalClose.addEventListener(
+        "click",
+        closeProjectModal
+    );
+
+    modalOverlay.addEventListener(
+        "click",
+        closeProjectModal
+    );
+
+
+    /*
+     * =====================================================
+     * ESCAPE KEY
+     * =====================================================
+     */
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                event.key === "Escape" &&
+                !modal.classList.contains("hidden")
+            ) {
+                closeProjectModal();
+            }
+
+        }
+    );
+
+</script>
+
+
+
+<!-- =========================
+     Photography
+========================= -->
 <section id="photography" class="py-24 bg-primary-deep">
-  <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4">
 
-    <div class="text-center mb-14" data-aos="fade-down">
-      <p class="font-mono text-xs tracking-[0.2em] text-gold uppercase mb-3">Photography</p>
-      <h2 class="font-display text-4xl font-semibold text-light mb-4">Through the viewfinder</h2>
-      <p class="text-muted max-w-xl mx-auto">
-        Check out some of my favorite shots.
-      </p>
+        <div class="text-center mb-14" data-aos="fade-down">
+
+            <p class="font-mono text-xs tracking-[0.2em] text-gold uppercase mb-3">
+                Photography
+            </p>
+
+            <p class="text-muted max-w-2xl mx-auto">
+                Check out my favorite shots through my Sony A7 III
+            </p>
+
+        </div>
+
+        <!-- Wider camera -->
+        <div class="max-w-5xl mx-auto" data-aos="zoom-in">
+
+            <div class="camera-body rounded-3xl p-6 md:p-8 shadow-2xl relative">
+
+                <!-- Top bar -->
+                <div class="flex items-center justify-between mb-5 px-1">
+
+                    <div class="w-14 h-3 bg-black/40 rounded-sm"></div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="font-mono text-xs text-muted uppercase tracking-wide">
+                            REC
+                        </span>
+
+                        <button
+                            onclick="triggerShutter()"
+                            aria-label="Take a photo"
+                            class="shutter-btn w-11 h-11 rounded-full"
+                        ></button>
+                    </div>
+
+                </div>
+
+                <!-- Screen -->
+                <div class="camera-screen relative rounded-xl overflow-hidden">
+
+                    <img
+                        id="cameraPhotoImg"
+                        src=""
+                        alt="Featured photograph"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div
+                        class="shutter-flash"
+                        id="shutterFlash"
+                    ></div>
+
+                    <span class="af-bracket af-tl"></span>
+                    <span class="af-bracket af-tr"></span>
+                    <span class="af-bracket af-bl"></span>
+                    <span class="af-bracket af-br"></span>
+
+                    <div class="absolute top-4 left-4 bg-black/40 px-3 py-1 rounded font-mono text-xs text-light">
+                        AUTO
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm px-4 py-3 flex items-center justify-between">
+
+                        <span
+                            id="cameraCaption"
+                            class="font-mono text-xs md:text-sm text-light tracking-wide"
+                        ></span>
+
+                        <span
+                            id="cameraCounter"
+                            class="font-mono text-xs md:text-sm text-gold"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+                <div class="flex items-center justify-between mt-3 px-1">
+
+                    <span
+                        id="cameraMeta"
+                        class="font-mono text-xs text-muted"
+                    ></span>
+
+                    <span class="font-mono text-xs text-muted">
+                        ARNAV.K
+                    </span>
+
+                </div>
+
+                <!-- Controls -->
+                <div class="flex items-center justify-center gap-8 mt-6">
+
+                    <button
+                        onclick="changePhoto(-1)"
+                        aria-label="Previous photo"
+                        class="arrow-btn bg-panel text-light rounded-full p-3 hover:bg-white/10"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                    </button>
+
+                    <div
+                        id="cameraDots"
+                        class="flex items-center gap-2"
+                    ></div>
+
+                    <button
+                        onclick="changePhoto(1)"
+                        aria-label="Next photo"
+                        class="arrow-btn bg-panel text-light rounded-full p-3 hover:bg-white/10"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-8">
+
+                <a
+                    href="https://arnavkarnikphotos.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide bg-gold text-primary-deep font-semibold px-6 py-3 rounded-md hover:opacity-90 transition"
+                >
+                    View Full Portfolio
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <!-- Camera widget -->
-    <div class="max-w-md mx-auto" data-aos="zoom-in">
-      <div class="camera-body rounded-3xl p-5 shadow-2xl relative">
-
-        <!-- top bar: hot shoe + shutter button -->
-        <div class="flex items-center justify-between mb-4 px-1">
-          <div class="w-10 h-3 bg-black/40 rounded-sm"></div>
-          <button onclick="triggerShutter()" aria-label="Take a photo"
-            class="shutter-btn w-9 h-9 rounded-full"></button>
-        </div>
-
-        <!-- screen -->
-        <div class="camera-screen relative rounded-lg overflow-hidden">
-          <img id="cameraPhotoImg" src="" alt="Featured photograph" class="w-full h-full object-cover">
-          <div class="shutter-flash" id="shutterFlash"></div>
-          <span class="af-bracket af-tl"></span>
-          <span class="af-bracket af-tr"></span>
-          <span class="af-bracket af-bl"></span>
-          <span class="af-bracket af-br"></span>
-
-          <div class="absolute bottom-0 left-0 right-0 bg-black/55 backdrop-blur-sm px-3 py-2 flex items-center justify-between">
-            <span id="cameraCaption" class="font-mono text-[11px] text-light tracking-wide"></span>
-            <span id="cameraCounter" class="font-mono text-[11px] text-gold"></span>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-between mt-2 px-1">
-          <span id="cameraMeta" class="font-mono text-[10px] text-muted"></span>
-        </div>
-
-        <!-- controls -->
-        <div class="flex items-center justify-center gap-6 mt-5">
-          <button onclick="changePhoto(-1)" aria-label="Previous photo"
-            class="arrow-btn bg-panel text-light rounded-full p-2 hover:bg-white/10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-            </svg>
-          </button>
-
-          <div id="cameraDots" class="flex items-center gap-2"></div>
-
-          <button onclick="changePhoto(1)" aria-label="Next photo"
-            class="arrow-btn bg-panel text-light rounded-full p-2 hover:bg-white/10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="text-center mt-8">
-        <a href="https://arnavkarnikphotos.com/" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wide bg-gold text-primary-deep font-semibold px-6 py-3 rounded-md hover:opacity-90 transition">
-          View Full Portfolio
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-  </div>
 </section>
 
-<!-- Footer -->
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="bg-primary text-muted py-8">
     <div class="container mx-auto text-center font-mono text-xs tracking-wide">
         <p>&copy; 2026 Arnav Karnik. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- scripts -->
+<!-- =========================
+     PARTICLES
+========================= -->
 <script src="./particles.js-master/particles.js"></script>
-<script src="./particles.js-master//demo/js/app.js"></script>
+<script src="./particles.js-master/demo/js/app.js"></script>
 <script src="./particles.js-master/demo/js/lib/stats.js"></script>
 
+<!-- =========================
+     GENERAL SITE JS
+========================= -->
 <script>
-    // Smooth scroll
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+
             const target = document.querySelector(this.getAttribute('href'));
+
             if (!target) return;
+
             e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
+
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+
             const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+
+            if (
+                mobileMenu &&
+                !mobileMenu.classList.contains('hidden')
+            ) {
                 mobileMenu.classList.add('hidden');
             }
         });
     });
 
-    // Mobile menu toggle
+    // Mobile menu
     const menuBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+
     if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
     }
 </script>
 
+<!-- =========================
+     EXPERIENCE DATA
+========================= -->
 <script>
-  // Camera / photography gallery
-  // Replace src, caption, and meta below with your own 5 favorite photos.
-  const photos = [
-    { src: "./images/dolomites2.jpg", caption: "Dolomites", meta: "f/2.8 · 1/500s · ISO 200" },
-    { src: "./images/oldTrafford1.jpg", caption: "Theatre of Dreams", meta: "f/4 · 1/250s · ISO 100" },
-    { src: "./images/parisHoops.jpg", caption: "Hooping in Paris", meta: "f/1.8 · 1/160s · ISO 400" },
-    { src: "./images/munnarTeaPickers.jpg", caption: "Tea Pickers in Munnar India", meta: "f/8 · 1/1000s · ISO 100" },
-    { src: "./images/wiliwilinuiRidgeHike3.jpg", caption: "Hiking on Oʻahu", meta: "f/2 · 1/125s · ISO 800" }
-  ];
+    const experiences = [
 
-  let currentPhoto = 0;
+        {
+            company: "Capital One",
+            companyMark: "C1",
+            role: "Data Science Analyst",
+            team: "Payment Pricing & Portfolio Analytics",
+            date: "Sep 2025 — Jun 2026",
+            bullets: [
+                "Built a full-stack dynamic pricing simulation platform using Streamlit and Snowflake to model how pricing changes impact payment network revenue.",
+                "Added industry-category attributes and merchant profiling to support higher-level simulations across merchant segments and MCCs."
+            ]
+        },
 
-  function renderDots() {
-    const dotsContainer = document.getElementById('cameraDots');
-    dotsContainer.innerHTML = '';
-    photos.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'camera-dot' + (i === currentPhoto ? ' active' : '');
-      dot.setAttribute('aria-label', `View photo ${i + 1}`);
-      dot.addEventListener('click', () => goToPhoto(i));
-      dotsContainer.appendChild(dot);
+        {
+            company: "Discover",
+            companyMark: "D",
+            role: "AARC Data Science Analyst",
+            team: "Finance Python Automation",
+            date: "Aug 2024 — Sep 2025",
+            bullets: [
+                "Executed CECL forecasting models across Discover business units, improving forecast accuracy by 23%.",
+                "Built a Streamlit application to validate 1M+ monthly records and identify anomalies 30% faster using time-series and historical benchmark analysis."
+            ]
+        },
+
+        {
+            company: "Discover Financial Services",
+            companyMark: "D",
+            role: "Data & Analytics Intern",
+            team: "Credit BI",
+            date: "Jun 2023 — Aug 2023",
+            bullets: [
+                "Designed and developed interactive dashboards using Figma and Tableau, contributing to a 40% increase in user engagement.",
+                "Worked with cross-functional stakeholders to gather requirements and build dashboards aligned with business needs."
+            ]
+        },
+
+        {
+            company: "Sentry",
+            companyMark: "S",
+            role: "Associate Software Developer",
+            team: "Software Engineering",
+            date: "May 2022 — May 2023",
+            bullets: [
+                "Built an ASP.NET Core MVC link farm feature allowing users to dynamically manage 25+ data resource links, reducing support requests by 30%.",
+                "Built an API endpoint to reprocess failed file ingestions, recovering 1,000+ files and reducing manual intervention by 75%."
+            ]
+        }
+
+    ];
+
+    const experienceContainer =
+        document.getElementById("experience-container");
+
+    experiences.forEach((exp, index) => {
+
+        const card = document.createElement("div");
+
+        card.className =
+            "experience-card bg-panel rounded-xl shadow-lg p-6 h-full flex flex-col";
+
+        card.setAttribute("data-aos", "fade-up");
+        card.setAttribute("data-aos-delay", `${index * 100}`);
+        card.setAttribute("data-aos-duration", "800");
+
+        card.innerHTML = `
+            <div class="flex items-center gap-4 mb-5">
+
+                <div class="company-mark">
+                    ${exp.companyMark}
+                </div>
+
+                <div>
+                    <p class="text-muted text-xs font-mono uppercase tracking-wide">
+                        ${exp.company}
+                    </p>
+
+                    <p class="text-gold text-xs mt-1">
+                        ${exp.team}
+                    </p>
+                </div>
+
+            </div>
+
+            <h3 class="text-light text-xl font-semibold mb-2 font-display">
+                ${exp.role}
+            </h3>
+
+            <p class="text-muted text-sm font-mono mb-5">
+                ${exp.date}
+            </p>
+
+            <div class="space-y-4">
+
+                ${exp.bullets.map(bullet => `
+                    <p class="experience-bullet text-gray-300 text-sm leading-relaxed">
+                        ${bullet}
+                    </p>
+                `).join("")}
+
+            </div>
+        `;
+
+        experienceContainer.appendChild(card);
+
     });
-  }
 
-  function updateCamera() {
-    const photoImg = document.getElementById('cameraPhotoImg');
-    const captionEl = document.getElementById('cameraCaption');
-    const metaEl = document.getElementById('cameraMeta');
-    const counterEl = document.getElementById('cameraCounter');
-
-    photoImg.style.opacity = 0;
     setTimeout(() => {
-      photoImg.src = photos[currentPhoto].src;
-      captionEl.textContent = photos[currentPhoto].caption;
-      metaEl.textContent = photos[currentPhoto].meta;
-      counterEl.textContent = `${String(currentPhoto + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
-      photoImg.style.opacity = 1;
-    }, 150);
-
-    renderDots();
-  }
-
-  function changePhoto(direction) {
-    currentPhoto = (currentPhoto + direction + photos.length) % photos.length;
-    updateCamera();
-  }
-
-  function goToPhoto(index) {
-    currentPhoto = index;
-    updateCamera();
-  }
-
-  function triggerShutter() {
-    const flash = document.getElementById('shutterFlash');
-    flash.style.opacity = 1;
-    setTimeout(() => { flash.style.opacity = 0; }, 120);
-    changePhoto(1);
-  }
-
-  document.addEventListener('DOMContentLoaded', updateCamera);
+        if (window.AOS) {
+            AOS.refresh();
+        }
+    }, 100);
 </script>
 
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<!-- =========================
+     ABOUT PHOTO SLIDER
+========================= -->
 <script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
+
+    const aboutPhotos = [
+
+        {
+            src: "./images/parisHoops.jpg",
+            title: "Basketball",
+            caption: "I love hooping! Here is the prettiest place I have played basketball."
+        },
+
+        {
+            src: "./images/dolomites2.jpg",
+            title: "Hiking with my camera",
+            caption: "I love to be out in nature taking photos with my camera."
+        },
+
+        {
+            src: "./images/oldTrafford1.jpg",
+            title: "Manchester Unietd",
+            caption: "I have been a United fan since I was very little. So visiting Old Trafford was a dream come true."
+        },
+
+        
+
+    ];
+
+    let currentAboutPhoto = 0;
+
+    function renderAboutDots() {
+
+        const dotsContainer =
+            document.getElementById("aboutSliderDots");
+
+        dotsContainer.innerHTML = "";
+
+        aboutPhotos.forEach((photo, index) => {
+
+            const dot = document.createElement("button");
+
+            dot.className =
+                "slider-dot" +
+                (index === currentAboutPhoto ? " active" : "");
+
+            dot.setAttribute(
+                "aria-label",
+                `View about photo ${index + 1}`
+            );
+
+            dot.addEventListener("click", () => {
+                currentAboutPhoto = index;
+                updateAboutSlider();
+            });
+
+            dotsContainer.appendChild(dot);
+
+        });
+    }
+
+    function updateAboutSlider() {
+
+        const image =
+            document.getElementById("aboutSliderImage");
+
+        const title =
+            document.getElementById("aboutSliderTitle");
+
+        const caption =
+            document.getElementById("aboutSliderCaption");
+
+        image.style.opacity = 0;
+
+        setTimeout(() => {
+
+            image.src =
+                aboutPhotos[currentAboutPhoto].src;
+
+            title.textContent =
+                aboutPhotos[currentAboutPhoto].title;
+
+            caption.textContent =
+                aboutPhotos[currentAboutPhoto].caption;
+
+            image.style.opacity = 1;
+
+        }, 150);
+
+        renderAboutDots();
+    }
+
+    function changeAboutPhoto(direction) {
+
+        currentAboutPhoto =
+            (
+                currentAboutPhoto +
+                direction +
+                aboutPhotos.length
+            ) %
+            aboutPhotos.length;
+
+        updateAboutSlider();
+    }
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        updateAboutSlider
+    );
+
+</script>
+
+<!-- =========================
+     CAMERA GALLERY
+========================= -->
+<script>
+
+    const photos = [
+
+        {
+            src: "./images/dolomites2.jpg",
+            caption: "Dolomites",
+        },
+
+        {
+            src: "./images/oldTrafford1.jpg",
+            caption: "Theatre of Dreams",
+        },
+
+        {
+            src: "./images/parisHoops.jpg",
+            caption: "Hooping in Paris",
+        },
+
+        {
+            src: "./images/munnarTeaPickers.jpg",
+            caption: "Tea Pickers in Munnar, India",
+        },
+        
+        {
+            src: "./images/elephant.jpg",
+            caption: "Elephants in Yala National Park, Sri Lanka",
+        },
+
+        {
+            src: "./images/keitlin.jpg",
+            caption: "Keitlin with her foster puppy",
+        },
+        
+        {
+            src: "./images/lucasJac.jpg",
+            caption: "Dinner with Jac & Lucas",
+        },
+
+        {
+            src: "./images/munnarHike3.jpg",
+            caption: "Munnar, India",
+        },
+
+        {
+            src: "./images/popoccatepetl.jpg",
+            caption: "Popocatepetl Volcano, Mexico",
+        },
+
+        {
+            src: "./images/pr1Hike1.jpg",
+            caption: "PR1 Madeira, Portugal",
+        },
+        
+        {
+            src: "./images/raigad.jpg",
+            caption: "Raigad Fort",
+        },
+
+        {
+            src: "./images/salkantay.jpg",
+            caption: "Sunset at Humantay Mountain",
+        },
+        {
+            src: "./images/soccerPitch.jpg",
+            caption: "Futbol Pitch in Sikkim",
+        }
+
+
+    ];
+
+    let currentPhoto = 0;
+
+    function renderDots() {
+
+        const dotsContainer =
+            document.getElementById("cameraDots");
+
+        dotsContainer.innerHTML = "";
+
+        photos.forEach((photo, index) => {
+
+            const dot =
+                document.createElement("button");
+
+            dot.className =
+                "camera-dot" +
+                (index === currentPhoto ? " active" : "");
+
+            dot.setAttribute(
+                "aria-label",
+                `View photo ${index + 1}`
+            );
+
+            dot.addEventListener(
+                "click",
+                () => goToPhoto(index)
+            );
+
+            dotsContainer.appendChild(dot);
+
+        });
+    }
+
+    function updateCamera() {
+
+        const photoImg =
+            document.getElementById("cameraPhotoImg");
+
+        const captionEl =
+            document.getElementById("cameraCaption");
+
+        const counterEl =
+            document.getElementById("cameraCounter");
+
+        photoImg.style.opacity = 0;
+
+        setTimeout(() => {
+
+            photoImg.src =
+                photos[currentPhoto].src;
+
+            captionEl.textContent =
+                photos[currentPhoto].caption;
+
+            
+
+            counterEl.textContent =
+                `${String(currentPhoto + 1).padStart(2, "0")} / ${String(photos.length).padStart(2, "0")}`;
+
+            photoImg.style.opacity = 1;
+
+        }, 150);
+
+        renderDots();
+    }
+
+    function changePhoto(direction) {
+
+        currentPhoto =
+            (
+                currentPhoto +
+                direction +
+                photos.length
+            ) %
+            photos.length;
+
+        updateCamera();
+    }
+
+    function goToPhoto(index) {
+
+        currentPhoto = index;
+
+        updateCamera();
+    }
+
+    function triggerShutter() {
+
+        const flash =
+            document.getElementById("shutterFlash");
+
+        flash.style.opacity = 1;
+
+        setTimeout(() => {
+            flash.style.opacity = 0;
+        }, 120);
+
+        changePhoto(1);
+    }
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        updateCamera
+    );
+
+</script>
+
+<!-- =========================
+     AOS
+========================= -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
 </script>
 
 </body>
